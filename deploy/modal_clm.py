@@ -44,7 +44,7 @@ def _wait(url: str, timeout: float = 900) -> None:
 
 @app.function(image=image, gpu="L4", volumes={"/root/.cache": cache},
               secrets=[modal.Secret.from_name("clm-api-key")],
-              timeout=24 * 3600, scaledown_window=15 * 60)
+              timeout=24 * 3600, scaledown_window=2 * 60)  # GPU bills while idle; keep this short
 @modal.concurrent(max_inputs=32)
 @modal.web_server(port=8700, startup_timeout=900)
 def serve():
