@@ -57,3 +57,12 @@ Use Chrome or Edge for microphone input (Web Speech API). Typing and the preset 
 4. **Why CLM:** session KPIs computed from your own runs, plus the comparison table.
 
 The header pills show each lane's status. A lane that isn't configured shows an error instead of fake numbers. If CLM points at the repo's mock encoder, the pill reads "MOCK encoder".
+
+## Run our evaluation
+
+`bench/eval_set.json` holds 40 labeled caller turns covering booking, rescheduling, cancelling, refills, billing, insurance, clinic info, small talk, emergencies and callers trailing off mid-sentence. `bench/run_eval.py` sends each turn to every configured lane at the same moment, with 8, 64 and 250 tools. It scores tool-routing, escalation and end-of-turn accuracy and records p50/p95 latency. Output goes to `bench/results/`: `summary.md`, `results.json` and two charts.
+
+```bash
+backend/.venv/Scripts/pip install matplotlib
+backend/.venv/Scripts/python bench/run_eval.py   # reads keys from backend/.env (git-ignored)
+```
