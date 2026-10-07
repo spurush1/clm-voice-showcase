@@ -59,3 +59,34 @@ iteration_chart(
     lat={"Normal LLM": 1857, "Jev": 328, "CLM-8B": 436},
     compute={"CLM-8B": 102},
 )
+
+
+def before_after_chart(fname):
+    """Iteration 2: CLM before vs after fine-tuning, with Jev as the reference.
+    Numbers from bench/results/iter1_clm_zero_shot/results.json and iter2_clm_finetuned/results.json (8 tools)."""
+    decisions = ["Right tool", "Escalation", "Caller finished?"]
+    series = {"CLM out of the box": ([13, 88, 85], "#9fdcc6"),
+              "CLM fine-tuned": ([87, 92, 100], COLORS["CLM-8B"]),
+              "Jev": ([100, 100, 98], COLORS["Jev"])}
+    fig, ax = plt.subplots(figsize=(12, 6.75), dpi=150)
+    fig.subplots_adjust(top=0.78, bottom=0.14, left=0.07, right=0.97)
+    fig.text(0.07, 0.93, "Iteration 2: 27 seconds of fine-tuning, 13% to 87%", fontsize=20, weight="bold", color=INK)
+    fig.text(0.07, 0.875, "Accuracy on the same 40 unseen caller turns, % (higher is better). 8 tools.", fontsize=12, color=MUTED)
+    fig.text(0.07, 0.03, SRC, fontsize=8.5, color=MUTED)
+    w = 0.26
+    for k, (name, (vals, col)) in enumerate(series.items()):
+        xs = [i + (k - 1) * w for i in range(len(decisions))]
+        ax.bar(xs, vals, w, color=col, label=name)
+        for x, v in zip(xs, vals):
+            ax.text(x, v + 1.5, f"{v}%", ha="center", weight="bold", color=INK, fontsize=11)
+    ax.set_xticks(range(len(decisions)), decisions, fontsize=13)
+    ax.set_ylim(0, 132)
+    ax.set_yticks([])
+    ax.legend(frameon=False, fontsize=11, loc="lower right", bbox_to_anchor=(1, 1.0), ncol=3)
+    ax.annotate("fine-tuned CLM still missed 3 of 5 emergencies / human requests", (1, 97), xytext=(0.15, 121), fontsize=10.5,
+                color="#b91c1c", ha="left", arrowprops=dict(arrowstyle="->", color="#b91c1c"))
+    fig.savefig(os.path.join(OUT, fname))
+    print("wrote", fname)
+
+
+before_after_chart("iter2_fine_tuned.png")

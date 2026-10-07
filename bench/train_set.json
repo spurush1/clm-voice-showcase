@@ -1,0 +1,2093 @@
+{
+ "description": "Fine-tuning set for Iteration 2. Disjoint from eval_set.json.",
+ "rows": [
+  {
+   "caller": "I won't make it Thursday, please cancel my appointment.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Does my UnitedHealthcare plan cover lab work there?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What are your hours Saturday morning?",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'm running low on lisinopril, can the doctor renew it?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I think I was overbilled for my visit Tuesday.",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can you bump my appointment with Dr. Lee back a few days?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need my cholesterol meds refilled before the weekend.",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'm on Humana, can I still be seen at your clinic?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'd like to make an appointment, I've had my yearly physical for a week.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'd like to call off my appointment this afternoon.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I think I'm having a stroke, my face feels numb.",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to come in and see the nurse practitioner about my yearly physical.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Is a pediatrician taking new patients? I'd like to book a visit.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My metformin prescription ran out, I need more.",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I wanted to ask about the, uh, the thing with my",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "There's a lot of bleeding and it won't stop.",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My appointment, the one on, um",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "Can you call in a refill for my asthma inhaler?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I have an appointment Monday but I need a different time.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can I schedule a visit with Dr. Lee this afternoon?",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My appointment clashes with work, can I move it to Saturday morning?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What are your hours Wednesday?",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I think I was overbilled for my visit Friday.",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Hi, yes, I'm calling to book a time to see someone about my yearly physical.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to change my booking from Monday to later that week.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to come in and see Dr. Okafor about a rash that won't go away.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Hang on, let me just grab my",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "My my cholesterol meds prescription ran out, I need more.",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'm on my employer's plan, can I still be seen at your clinic?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I have an appointment Friday but I need a different time.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could we shift my visit with Dr. Chen to the 21st?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Please remove my Friday appointment from the calendar.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I have an appointment Tuesday but I need a different time.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Please move my check-up to Monday, the current slot doesn't work.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I won't make it Wednesday, please cancel my appointment.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Will my employer's plan cover a visit for a vaccine?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could we shift my visit with the nurse practitioner to Monday?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can you call in a refill for metformin?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I want to set up an appointment for knee pain.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you fit me in Wednesday? It's for a sore throat.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you send a new script for my insulin to my pharmacy?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "There's a charge on my statement I don't recognize.",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Does my a Blue Shield HMO plan cover lab work there?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could we shift my visit with my usual doctor to next week?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Please move my check-up to Friday, the current slot doesn't work.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I think I was overbilled for my visit Thursday.",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My son needs to be seen for a rash that won't go away, when's the next opening?",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can you bump my appointment with my usual doctor back a few days?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Will Kaiser cover a visit for back pain?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My wife fainted and won't wake up.",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can I schedule a visit with Dr. Gomez this afternoon?",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "This isn't working, transfer me to a staff member.",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My lisinopril prescription ran out, I need more.",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Will UnitedHealthcare cover a visit for back pain?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What insurance plans do you take? I have UnitedHealthcare.",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "The pharmacy said metformin needs a new authorization from the doctor.",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I think I was overbilled for my visit next week.",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Why was I charged a no-show fee? I came to the appointment.",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Cancel my visit with Dr. Lee, I don't need it anymore.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "There's a charge on my statement, um",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "I'd like to call off my appointment next week.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to come in and see Dr. Gomez about back pain.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Go ahead and drop my booking with Dr. Lee, I'm going elsewhere.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My appointment clashes with work, can I move it to Friday?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'd like a refund for the double payment I made.",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you fit me in Tuesday? It's for knee pain.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Will Medicaid cover a visit for back pain?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'd like to make an appointment, I've had a sore throat, um",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "Can I schedule a visit with the nurse practitioner Monday?",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What are your hours Monday?",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'm on a Blue Shield HMO, can I still be seen at your clinic?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Will Cigna cover a visit for back pain?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to change my booking from the 21st to later that week.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Go ahead and drop my booking with the nurse practitioner, I'm going elsewhere.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My my asthma inhaler prescription ran out, I need more.",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Will Kaiser cover a visit for a rash that won't go away?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can I talk to a human please?",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to cancel, I'm traveling Wednesday.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could we shift my visit with Dr. Lee to Wednesday?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could we shift my visit with Dr. Chen to Monday?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Do you accept Medicaid?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Hi, yes, I'm calling to book a time to see someone about knee pain.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Are you in network, um",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "I'd like to call off my appointment Monday.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to change my booking from Thursday to later that week.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Hi, yes, I'm calling to book a time to see someone about a sore throat.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to change my booking from Friday to later that week.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My appointment clashes with work, can I move it to Monday?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I have an appointment Wednesday but I need a different time.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can I schedule a visit with Dr. Chen Thursday?",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Is Dr. Gomez taking new patients? I'd like to, um",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "Can you bump my appointment with Dr. Chen back a few days?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I have an appointment Saturday morning but I need a different time.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What are your hours the 21st?",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I won't make it Friday, please cancel my appointment.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Is Dr. Gomez taking new patients? I'd like to book a visit.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I think I was overbilled for my, um",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "I'd like to make an appointment, I've had knee pain for a week.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Is Dr. Okafor taking new patients? I'd like to book a visit.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to come in and see my usual doctor about my yearly physical.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Are you in network with a, um",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "Please remove my Tuesday appointment from the calendar.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My son needs to be seen for a follow-up on my bloodwork, when's the next opening?",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'm booked for the 21st, is there anything earlier instead?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you fit me in Monday? It's for a sore throat.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Where do I park when I come in?",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Okay so the reason I'm calling is",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "Can I schedule a visit with my usual doctor Thursday?",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Hi, yes, I'm calling to book a time to see someone about a rash that won't go away.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I won't make it this afternoon, please cancel my appointment.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to cancel, I'm traveling Monday.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Are you closed on public holidays?",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Right, so, last time I was there I",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "Could we shift my visit with my usual doctor to Friday?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Please remove my Saturday morning appointment from the calendar.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Does my Cigna plan cover lab work there?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I think I was overbilled for my visit this afternoon.",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Put me through to a real person, I'm done with this machine.",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Alright, thank you, have a good one.",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What's the address of the clinic?",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My my thyroid medication prescription ran out, I need more.",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Do you accept Humana?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Does my Kaiser plan cover lab work there?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can you call in a refill for my cholesterol meds?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Is the nurse practitioner taking new patients? I'd like to, um",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "I'm running low on my thyroid medication, can the doctor renew it?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Yes, so I got a letter saying that",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "Does my Medicaid plan cover lab work there?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to cancel, I'm traveling this afternoon.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Do you accept my employer's plan?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "How much do I still owe on my account?",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'm on UnitedHealthcare, can I still be seen at your clinic?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "So my doctor told me that I should",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "I can't breathe properly and my lips are turning blue.",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'm running low on my asthma inhaler, can the doctor renew it?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can you bump my appointment with Dr. Okafor back a few days?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Please remove my Monday appointment from the calendar.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Are you in network with Cigna?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you fit me in Friday? It's for knee pain.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can you bump my appointment with the nurse practitioner back a few days?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My child swallowed a bunch of pills.",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I was hoping to, um, maybe",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "Go ahead and drop my booking with Dr. Okafor, I'm going elsewhere.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'd like a refund for the double, um",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "I need to cancel, I'm traveling Thursday.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to change my booking from this afternoon to later that week.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I won't make it Saturday morning, please cancel my appointment.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Are you in network with Medicaid?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you send a new script for metformin to my pharmacy?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could we shift my visit with Dr. Chen to Wednesday?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I think I was overbilled for my visit Monday.",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'm running low on my insulin, can the doctor renew it?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'm calling because my mom needs",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "My son needs to be seen for a follow-up on my bloodwork, when's, um",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "Can you call in a refill for lisinopril?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Cancel my visit with my usual doctor, I don't need it anymore.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I have an appointment this afternoon but I need a different time.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Are you in network with Kaiser?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'd like to call off my appointment the 21st.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Please move my check-up to Thursday, the current slot doesn't work.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Please remove my Thursday appointment from the calendar.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'd like to make an appointment, I've had a rash that won't go away for a week.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What insurance plans do you take? I have Humana.",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I want to set up an appointment for a rash that won't go away.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can you call in a refill for my insulin?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'm running low on my allergy pills, can the doctor renew it?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My my allergy pills prescription ran out, I need more.",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Please remove my Wednesday appointment from the calendar.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I won't make it the 21st, please cancel my appointment.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I think I was overbilled for my visit the 21st.",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "How early do you open in the morning?",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Perfect, that's everything, bye.",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'd like to call off my appointment Saturday morning.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Will my employer's plan cover a visit for a rash that won't go away?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'm running low on my cholesterol meds, can the doctor renew it?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Does my my employer's plan plan cover lab work there?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Hi, yes, I'm calling to book a time to see someone about a follow-up on my bloodwork.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Which floor is the clinic on?",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to change my booking from next week to later that week.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need my insulin refilled before the weekend.",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you send a new script for lisinopril to my pharmacy?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can I schedule a visit with Dr. Okafor next week?",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'd like to call off my appointment Wednesday.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What insurance plans do you take? I have a Blue Shield HMO.",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Are you in network with UnitedHealthcare?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'd like to make an appointment, I've had a follow-up on my bloodwork for a week.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can you bump my appointment with a pediatrician back a few days?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you send a new script for my asthma inhaler to my pharmacy?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you send a new script for my thyroid medication to my pharmacy?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My husband has severe chest pain and is sweating.",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to cancel, I'm traveling the 21st.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can I schedule a visit with Dr. Gomez next week?",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My appointment clashes with work, can I move it to Wednesday?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Is Dr. Lee taking new patients? I'd like to book a visit.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you fit me in Wednesday? It's for back pain.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Will Kaiser cover a visit for a sore throat?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you send a new script for lisinopril, um",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "Go ahead and drop my booking with a pediatrician, I'm going elsewhere.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Hi there, how are you?",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I won't make it next week, please cancel my appointment.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Are you in network with a Blue Shield HMO?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Do you accept Kaiser, um",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "I'm running low on metformin, can the doctor renew it?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Please remove my this afternoon appointment from the calendar.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you, actually, wait one second, I",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "My insurance paid but you still sent me an invoice.",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "The pharmacy said my allergy pills needs a new authorization from the doctor.",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What are your hours Friday?",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could we shift my visit with Dr. Lee to Tuesday?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could we shift my visit with Dr. Gomez to the 21st?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What insurance plans do you take? I have Medicaid.",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What insurance plans do you take? I have Cigna.",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I want to set up an appointment for a sore throat.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to come in and see the nurse practitioner about a sore throat.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Is Dr. Chen taking new patients? I'd like to book a visit.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you send a new script for my thyroid medication, um",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "I need metformin refilled before the weekend.",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I have an appointment next week but I need a different time.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Please move my check-up to Saturday morning, the current slot doesn't work.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you fit me in Thursday? It's for back pain.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'd like to make an appointment, I've had back pain for a week.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I want to set up an appointment for back pain.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can I pay my bill over the phone?",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can you bump my appointment with Dr. Gomez back a few days?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can I schedule a visit with the nurse practitioner next week?",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can you call in a refill for, um",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "I'd like to make an appointment, I've had a sore throat for a week.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I need to come in and see Dr. Lee about back pain.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "The pharmacy said my cholesterol meds needs a new authorization from the doctor.",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What are your hours next week?",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you send a new script for my cholesterol meds to my pharmacy?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My son needs to be seen for my yearly physical, when's the next opening?",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My my insulin prescription ran out, I need more.",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Cancel my visit with Dr. Chen, I don't need it anymore.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can you call in a refill for my thyroid medication?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Do you accept UnitedHealthcare?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My son needs to be seen for a sore throat, when's the next opening?",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Okay great, appreciate it.",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could we shift my visit with Dr. Chen to Friday?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can I schedule a visit with Dr. Chen next week?",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "You've gotten this wrong four times, let me talk to someone.",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Will UnitedHealthcare cover a visit for a rash that won't go away?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Can you call in a refill for my allergy pills?",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I won't make it Monday, please cancel my appointment.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Hello, is this the clinic?",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What insurance plans do you take?, um",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "I'm on Medicaid, can I still be seen at your clinic?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "My appointment clashes with work, can I move it to next week?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'm having thoughts of hurting myself.",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Thanks, that's really helpful.",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Is the clinic wheelchair accessible?",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What are your hours Thursday?",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Please move my check-up to Wednesday, the current slot doesn't work.",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Why was I charged a no-show fee? I came, um",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": false
+   }
+  },
+  {
+   "caller": "Go ahead and drop my booking with Dr. Chen, I'm going elsewhere.",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I'm booked for this afternoon, is there anything earlier instead?",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you fit me in the 21st? It's for back pain.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "I want to speak to the office manager now.",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "What insurance plans do you take? I have Kaiser.",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Could you fit me in this afternoon? It's for a sore throat.",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  },
+  {
+   "caller": "Will Humana cover a visit for knee pain?",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+[choice] /cache/voice_data [voice] rows train 366 val 41 test 26 | questions train 1028 val 113 test 75
+[choice] embedding 829 unique texts
+[embed] server 64/829
+[choice] warm start /cache/clm/CLM_v0.1-8B.pt {'width': 1536, 'depth': 3, 'activation': 'gelu', 'layernorm': True, 'residual': False}
+[choice] baselines {"majority_val": 0.6637168141592921, "majority_test": 0.68}
+[choice] epoch 0 (init) val acc 0.6549 test acc 0.6533
+[choice] epoch 1 loss 2.9837 val acc 0.6549 soft_ce 1.1239
+[choice] epoch 2 loss 2.1166 val acc 0.7257 soft_ce 0.7037
+[choice] epoch 3 loss 1.8868 val acc 0.7522 soft_ce 0.6731
+[choice] epoch 4 loss 1.7548 val acc 0.8496 soft_ce 0.5666
+[choice] epoch 5 loss 1.7141 val acc 0.8584 soft_ce 0.5275
+[choice] epoch 6 loss 1.5714 val acc 0.8673 soft_ce 0.4571
+[choice] epoch 7 loss 1.5579 val acc 0.9115 soft_ce 0.3432
+[choice] epoch 8 loss 1.4459 val acc 0.9027 soft_ce 0.2783
+[choice] epoch 9 loss 1.3944 val acc 0.9027 soft_ce 0.2644
+[choice] epoch 10 loss 1.4156 val acc 0.9292 soft_ce 0.2532
+[choice] epoch 11 loss 1.3586 val acc 0.9381 soft_ce 0.2541
+[choice] epoch 12 loss 1.3268 val acc 0.9381 soft_ce 0.1992
+[choice] epoch 13 loss 1.2621 val acc 0.9381 soft_ce 0.1635
+[choice] epoch 14 loss 1.2855 val acc 0.9646 soft_ce 0.1468
+[choice] epoch 15 loss 1.2677 val acc 0.9823 soft_ce 0.1408
+[choice] epoch 16 loss 1.2518 val acc 0.9823 soft_ce 0.1372
+[choice] epoch 17 loss 1.2229 val acc 0.9823 soft_ce 0.1403
+[choice] epoch 18 loss 1.2818 val acc 0.9823 soft_ce 0.1425
+[choice] epoch 19 loss 1.2394 val acc 0.9823 soft_ce 0.1428
+[choice] epoch 20 loss 1.2739 val acc 0.9823 soft_ce 0.1428
+[choice] early stop at epoch 20
+[choice] best epoch 15: val acc 0.9823 | TEST acc 0.9200 (init 0.6533, majority 0.6800) per_question {'end_of_turn': 0.9231, 'escalate': 0.9231, 'tool': 0.913}
+[done] {"best_epoch": 15, "val_acc": 0.9823008849557522, "test": {"acc": 0.92, "soft_ce": 0.24123756408691407, "per_question": {"end_of_turn": 0.9231, "escalate": 0.9231, "tool": 0.913}}, "init_test": {"acc": 0.6533333333333333, "soft_ce": 1.2886097208658853, "per_question": {"end_of_turn": 0.8846, "escalate": 0.9231, "tool": 0.087}}, "majority_val": 0.6637168141592921, "majority_test": 0.68, "train_questions": 1028, "minutes": 0.45}
+
+/usr/local/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.

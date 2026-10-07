@@ -1,0 +1,9345 @@
+{
+ "meta": {
+  "run_at": "2026-10-07T13:11:12",
+  "cases": 40,
+  "sizes": [
+   8,
+   64,
+   250
+  ],
+  "models": {
+   "llm": "openai/gpt-4.1-mini",
+   "jev": "jev-latest",
+   "clm": "clm-voice"
+  },
+  "client": "Windows-11-10.0.26300-SP0"
+ },
+ "summary": [
+  {
+   "n_tools": 8,
+   "lane": "jev",
+   "ok": 40,
+   "errors": 0,
+   "tool_acc": 1.0,
+   "escalate_acc": 1.0,
+   "eot_acc": 0.975,
+   "p50_ms": 382.0728500140831,
+   "p95_ms": 573.4168000053614,
+   "mean_ms": 403.33435750217177,
+   "under_budget": 0.0,
+   "server_p50_ms": null
+  },
+  {
+   "n_tools": 8,
+   "lane": "clm",
+   "ok": 40,
+   "errors": 0,
+   "tool_acc": 0.8709677419354839,
+   "escalate_acc": 0.925,
+   "eot_acc": 1.0,
+   "p50_ms": 504.5205999922473,
+   "p95_ms": 552.643800037913,
+   "mean_ms": 515.0555900050676,
+   "under_budget": 0.0,
+   "server_p50_ms": 152.3
+  },
+  {
+   "n_tools": 64,
+   "lane": "jev",
+   "ok": 40,
+   "errors": 0,
+   "tool_acc": 1.0,
+   "escalate_acc": 1.0,
+   "eot_acc": 0.975,
+   "p50_ms": 392.04430000972934,
+   "p95_ms": 496.5836000046693,
+   "mean_ms": 391.4207149995491,
+   "under_budget": 0.0,
+   "server_p50_ms": null
+  },
+  {
+   "n_tools": 64,
+   "lane": "clm",
+   "ok": 40,
+   "errors": 0,
+   "tool_acc": 0.8709677419354839,
+   "escalate_acc": 0.925,
+   "eot_acc": 1.0,
+   "p50_ms": 345.88649997022003,
+   "p95_ms": 359.3387000146322,
+   "mean_ms": 346.67759500298416,
+   "under_budget": 0.0,
+   "server_p50_ms": 2.0
+  },
+  {
+   "n_tools": 250,
+   "lane": "jev",
+   "ok": 40,
+   "errors": 0,
+   "tool_acc": 1.0,
+   "escalate_acc": 1.0,
+   "eot_acc": 0.975,
+   "p50_ms": 427.9529000050388,
+   "p95_ms": 543.2868000352755,
+   "mean_ms": 432.7024899990647,
+   "under_budget": 0.0,
+   "server_p50_ms": null
+  },
+  {
+   "n_tools": 250,
+   "lane": "clm",
+   "ok": 40,
+   "errors": 0,
+   "tool_acc": 0.8709677419354839,
+   "escalate_acc": 0.925,
+   "eot_acc": 1.0,
+   "p50_ms": 352.00064998934977,
+   "p95_ms": 607.996299979277,
+   "mean_ms": 387.02461500361096,
+   "under_budget": 0.0,
+   "server_p50_ms": 2.3
+  }
+ ],
+ "rows": [
+  {
+   "n_tools": 8,
+   "case": "book-1",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 573.4168000053614,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.93,
+   "tool": "book_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "book_appointment",
+     1.0
+    ],
+    [
+     "clinic_info",
+     0.0
+    ],
+    [
+     "small_talk",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 730,
+    "output_tokens": 148
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "book-1",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 879.7843999927863,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 1.8,
+   "end_of_turn": 0.9740228633897459,
+   "tool": "book_appointment",
+   "tool_prob": 0.8397963777583959,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.8397963777583959
+    ],
+    [
+     "prescription_refill",
+     0.06825930224304137
+    ],
+    [
+     "reschedule_appointment",
+     0.06289517121640152
+    ]
+   ],
+   "frustration": 0.2959915329486149,
+   "escalate": 0.03661965660528398,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "book-2",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 342.152500001248,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.89,
+   "tool": "book_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "book_appointment",
+     1.0
+    ],
+    [
+     "cancel_appointment",
+     0.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 731,
+    "output_tokens": 148
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "book-2",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 497.64160002814606,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 154.5,
+   "end_of_turn": 0.9826833433987182,
+   "tool": "book_appointment",
+   "tool_prob": 0.8110463277267314,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.8110463277267314
+    ],
+    [
+     "prescription_refill",
+     0.06519249413804586
+    ],
+    [
+     "insurance_check",
+     0.05530472845161809
+    ]
+   ],
+   "frustration": 0.2766704120352244,
+   "escalate": 0.07186564150969645,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 372,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "book-3",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 390.40279999608174,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.93,
+   "tool": "book_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "book_appointment",
+     1.0
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ],
+    [
+     "cancel_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 728,
+    "output_tokens": 148
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "book-3",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 505.57790003949776,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 152.4,
+   "end_of_turn": 0.9794165305880705,
+   "tool": "book_appointment",
+   "tool_prob": 0.8737459649631116,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.8737459649631116
+    ],
+    [
+     "prescription_refill",
+     0.0369579223572171
+    ],
+    [
+     "clinic_info",
+     0.03280541622430125
+    ]
+   ],
+   "frustration": 0.24616384404059263,
+   "escalate": 0.06594778197719915,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 360,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "book-4",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 386.40710001345724,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.9,
+   "tool": "book_appointment",
+   "tool_prob": 0.99,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.99
+    ],
+    [
+     "clinic_info",
+     0.01
+    ],
+    [
+     "billing_question",
+     0.0
+    ]
+   ],
+   "frustration": 0.01,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 726,
+    "output_tokens": 148
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "book-4",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 512.2827000450343,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 153.8,
+   "end_of_turn": 0.9697371438489117,
+   "tool": "book_appointment",
+   "tool_prob": 0.5231713404082765,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.5231713404082765
+    ],
+    [
+     "reschedule_appointment",
+     0.17258547183890452
+    ],
+    [
+     "clinic_info",
+     0.1722244096826724
+    ]
+   ],
+   "frustration": 0.3223002638939138,
+   "escalate": 0.039648279242911075,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 352,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "book-5",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 397.5852000294253,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "book_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "book_appointment",
+     1.0
+    ],
+    [
+     "small_talk",
+     0.0
+    ],
+    [
+     "billing_question",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.05,
+   "usage": {
+    "input_tokens": 724,
+    "output_tokens": 148
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "book-5",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 497.0822999603115,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 153.3,
+   "end_of_turn": 0.99359485271355,
+   "tool": "book_appointment",
+   "tool_prob": 0.9097411469276288,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.9097411469276288
+    ],
+    [
+     "prescription_refill",
+     0.032803021819456775
+    ],
+    [
+     "clinic_info",
+     0.025298847200197296
+    ]
+   ],
+   "frustration": 0.2537375978405778,
+   "escalate": 0.05308651887857598,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 344,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "resched-1",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 402.2800999809988,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.96,
+   "tool": "reschedule_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     1.0
+    ],
+    [
+     "book_appointment",
+     0.0
+    ],
+    [
+     "small_talk",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 722,
+    "output_tokens": 150
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "resched-1",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 513.0209000199102,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 152.7,
+   "end_of_turn": 0.9771709560925673,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.9176423778830811,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.9176423778830811
+    ],
+    [
+     "cancel_appointment",
+     0.05932204533931883
+    ],
+    [
+     "book_appointment",
+     0.018408475178818006
+    ]
+   ],
+   "frustration": 0.23064090877027912,
+   "escalate": 0.0621798220773077,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 336,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "resched-2",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 382.969000027515,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.83,
+   "tool": "reschedule_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     1.0
+    ],
+    [
+     "cancel_appointment",
+     0.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ]
+   ],
+   "frustration": 0.02,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 732,
+    "output_tokens": 150
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "resched-2",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 521.1925000185147,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 152.2,
+   "end_of_turn": 0.9208088715620276,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.6858131128870809,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.6858131128870809
+    ],
+    [
+     "book_appointment",
+     0.18228545271488486
+    ],
+    [
+     "billing_question",
+     0.062434197119447775
+    ]
+   ],
+   "frustration": 0.29784181369670437,
+   "escalate": 0.06875491945244498,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 376,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "resched-3",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 406.40320000238717,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "reschedule_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     1.0
+    ],
+    [
+     "book_appointment",
+     0.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 729,
+    "output_tokens": 150
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "resched-3",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 496.77430000156164,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 153.1,
+   "end_of_turn": 0.954709973987005,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.7484253663645842,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.7484253663645842
+    ],
+    [
+     "billing_question",
+     0.12249488779035712
+    ],
+    [
+     "book_appointment",
+     0.05543457760865114
+    ]
+   ],
+   "frustration": 0.4120546631247083,
+   "escalate": 0.05526134042825316,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 364,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "resched-4",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 365.96530000679195,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.87,
+   "tool": "reschedule_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     1.0
+    ],
+    [
+     "book_appointment",
+     0.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ]
+   ],
+   "frustration": 0.03,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 727,
+    "output_tokens": 150
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "resched-4",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 497.11249995743856,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 152.5,
+   "end_of_turn": 0.9496902404127527,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.9373336852367438,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.9373336852367438
+    ],
+    [
+     "book_appointment",
+     0.03630820336320418
+    ],
+    [
+     "cancel_appointment",
+     0.02181410004142064
+    ]
+   ],
+   "frustration": 0.17578916356492397,
+   "escalate": 0.06339895352948657,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 356,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "cancel-1",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 366.86519999057055,
+   "reply": "I can cancel that. Can you confirm your full name and the appointment date?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "cancel_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     1.0
+    ],
+    [
+     "small_talk",
+     0.0
+    ],
+    [
+     "billing_question",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 725,
+    "output_tokens": 148
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "cancel-1",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 512.1875000186265,
+   "reply": "I can cancel that. Can you confirm your full name and the appointment date?",
+   "model": "clm-voice",
+   "server_ms": 152.3,
+   "end_of_turn": 0.9856472201206716,
+   "tool": "cancel_appointment",
+   "tool_prob": 0.5488274751703193,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     0.5488274751703193
+    ],
+    [
+     "reschedule_appointment",
+     0.37681780711268836
+    ],
+    [
+     "book_appointment",
+     0.0450326332699707
+    ]
+   ],
+   "frustration": 0.3799464124436932,
+   "escalate": 0.04792667555957265,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 348,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "cancel-2",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 394.9090000241995,
+   "reply": "I can cancel that. Can you confirm your full name and the appointment date?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "cancel_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     1.0
+    ],
+    [
+     "clinic_info",
+     0.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ]
+   ],
+   "frustration": 0.01,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 728,
+    "output_tokens": 148
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "cancel-2",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 504.59419999970123,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 152.4,
+   "end_of_turn": 0.957525171054691,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.6853014595417438,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.6853014595417438
+    ],
+    [
+     "cancel_appointment",
+     0.30349341913149336
+    ],
+    [
+     "billing_question",
+     0.004672667773412351
+    ]
+   ],
+   "frustration": 0.3359087479702406,
+   "escalate": 0.07212113964384836,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 360,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "cancel-3",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 361.92659998778254,
+   "reply": "I can cancel that. Can you confirm your full name and the appointment date?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.91,
+   "tool": "cancel_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     1.0
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ],
+    [
+     "prescription_refill",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 727,
+    "output_tokens": 148
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "cancel-3",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 502.6447000564076,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 152.1,
+   "end_of_turn": 0.9677746694771623,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.41139978557577556,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.41139978557577556
+    ],
+    [
+     "cancel_appointment",
+     0.29751509453394037
+    ],
+    [
+     "billing_question",
+     0.1771907602939476
+    ]
+   ],
+   "frustration": 0.5680179199809364,
+   "escalate": 0.0779301527358394,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 356,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "refill-1",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 366.6096999659203,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "prescription_refill",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     1.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ],
+    [
+     "book_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.06,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 728,
+    "output_tokens": 149
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "refill-1",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 521.7119000153616,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "clm-voice",
+   "server_ms": 152.0,
+   "end_of_turn": 0.9738752627016376,
+   "tool": "prescription_refill",
+   "tool_prob": 0.781167425881835,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     0.781167425881835
+    ],
+    [
+     "book_appointment",
+     0.11673949648313876
+    ],
+    [
+     "insurance_check",
+     0.07975045493397236
+    ]
+   ],
+   "frustration": 0.20592829290137077,
+   "escalate": 0.06980954008898678,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 360,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "refill-2",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 366.8602999532595,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.93,
+   "tool": "prescription_refill",
+   "tool_prob": 0.98,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     0.98
+    ],
+    [
+     "book_appointment",
+     0.02
+    ],
+    [
+     "clinic_info",
+     0.0
+    ]
+   ],
+   "frustration": 0.02,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 727,
+    "output_tokens": 149
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "refill-2",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 510.5761999730021,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "clm-voice",
+   "server_ms": 151.7,
+   "end_of_turn": 0.9846737393044123,
+   "tool": "prescription_refill",
+   "tool_prob": 0.6449532951232451,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     0.6449532951232451
+    ],
+    [
+     "book_appointment",
+     0.2450059254346607
+    ],
+    [
+     "insurance_check",
+     0.06657179516937431
+    ]
+   ],
+   "frustration": 0.2817429006729514,
+   "escalate": 0.08320298312831488,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 356,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "refill-3",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 403.5003000171855,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "prescription_refill",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     1.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 729,
+    "output_tokens": 149
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "refill-3",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 505.3497000481002,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "clm-voice",
+   "server_ms": 150.7,
+   "end_of_turn": 0.9223708379016659,
+   "tool": "prescription_refill",
+   "tool_prob": 0.8494913085601679,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     0.8494913085601679
+    ],
+    [
+     "reschedule_appointment",
+     0.04178994438786018
+    ],
+    [
+     "book_appointment",
+     0.03645345268494745
+    ]
+   ],
+   "frustration": 0.27960759367706456,
+   "escalate": 0.057202613246466444,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 360,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "refill-4",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 404.46459996746853,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.06,
+   "tool": "prescription_refill",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     1.0
+    ],
+    [
+     "billing_question",
+     0.0
+    ],
+    [
+     "cancel_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 721,
+    "output_tokens": 149
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "refill-4",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 504.1725999908522,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 152.4,
+   "end_of_turn": 0.46988702783542663,
+   "tool": "billing_question",
+   "tool_prob": 0.5008618784852981,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.5008618784852981
+    ],
+    [
+     "book_appointment",
+     0.2289284556564391
+    ],
+    [
+     "prescription_refill",
+     0.19404537017964069
+    ]
+   ],
+   "frustration": 0.6854227497858758,
+   "escalate": 0.054640789818265034,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 332,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "bill-1",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 949.9372999998741,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.93,
+   "tool": "billing_question",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "billing_question",
+     1.0
+    ],
+    [
+     "book_appointment",
+     0.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ]
+   ],
+   "frustration": 0.7,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 726,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "bill-1",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 552.643800037913,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "clm-voice",
+   "server_ms": 152.8,
+   "end_of_turn": 0.9844283667991587,
+   "tool": "billing_question",
+   "tool_prob": 0.834389776515962,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.834389776515962
+    ],
+    [
+     "cancel_appointment",
+     0.05201813010661403
+    ],
+    [
+     "reschedule_appointment",
+     0.04353263128067653
+    ]
+   ],
+   "frustration": 0.742084756042259,
+   "escalate": 0.05864195395812416,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 352,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "bill-2",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 384.39839996863157,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.92,
+   "tool": "billing_question",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "billing_question",
+     1.0
+    ],
+    [
+     "cancel_appointment",
+     0.0
+    ],
+    [
+     "book_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.84,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 725,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "bill-2",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 497.87890003062785,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "clm-voice",
+   "server_ms": 153.2,
+   "end_of_turn": 0.8944434885420675,
+   "tool": "billing_question",
+   "tool_prob": 0.7948633012741059,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.7948633012741059
+    ],
+    [
+     "insurance_check",
+     0.13333301484896512
+    ],
+    [
+     "book_appointment",
+     0.02154964143502919
+    ]
+   ],
+   "frustration": 0.6878509658635407,
+   "escalate": 0.08628376978213612,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 348,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "bill-3",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 376.6444000066258,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.9,
+   "tool": "billing_question",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "billing_question",
+     1.0
+    ],
+    [
+     "clinic_info",
+     0.0
+    ],
+    [
+     "cancel_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.05,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 729,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "bill-3",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 493.1720999884419,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "clm-voice",
+   "server_ms": 153.3,
+   "end_of_turn": 0.9519035888355201,
+   "tool": "billing_question",
+   "tool_prob": 0.8990715452736783,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.8990715452736783
+    ],
+    [
+     "insurance_check",
+     0.061709510123248185
+    ],
+    [
+     "clinic_info",
+     0.01507648576732615
+    ]
+   ],
+   "frustration": 0.3498389005099903,
+   "escalate": 0.04789718041433068,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 364,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "bill-4",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 527.5535000255331,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "billing_question",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "billing_question",
+     1.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 724,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "bill-4",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 497.25720001151785,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "clm-voice",
+   "server_ms": 152.5,
+   "end_of_turn": 0.975331353216678,
+   "tool": "billing_question",
+   "tool_prob": 0.4156423526283968,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.4156423526283968
+    ],
+    [
+     "insurance_check",
+     0.3045594477858671
+    ],
+    [
+     "book_appointment",
+     0.14659206820159668
+    ]
+   ],
+   "frustration": 0.6786290227899461,
+   "escalate": 0.051077652145931324,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 344,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "ins-1",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 322.486899967771,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "insurance_check",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "insurance_check",
+     1.0
+    ],
+    [
+     "small_talk",
+     0.0
+    ],
+    [
+     "book_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 719,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "ins-1",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 504.28749999264255,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "clm-voice",
+   "server_ms": 151.8,
+   "end_of_turn": 0.9424591594234037,
+   "tool": "insurance_check",
+   "tool_prob": 0.6992537666325293,
+   "tool_top3": [
+    [
+     "insurance_check",
+     0.6992537666325293
+    ],
+    [
+     "billing_question",
+     0.25137509961605137
+    ],
+    [
+     "book_appointment",
+     0.02425559825871819
+    ]
+   ],
+   "frustration": 0.5278947730417639,
+   "escalate": 0.0658564335001341,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 328,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "ins-2",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 372.34519998310134,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "insurance_check",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "insurance_check",
+     1.0
+    ],
+    [
+     "book_appointment",
+     0.0
+    ],
+    [
+     "clinic_info",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 727,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "ins-2",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 509.1103999875486,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "clm-voice",
+   "server_ms": 151.6,
+   "end_of_turn": 0.976687868987316,
+   "tool": "insurance_check",
+   "tool_prob": 0.5601279370387054,
+   "tool_top3": [
+    [
+     "insurance_check",
+     0.5601279370387054
+    ],
+    [
+     "billing_question",
+     0.32349403960145984
+    ],
+    [
+     "book_appointment",
+     0.04274527754483912
+    ]
+   ],
+   "frustration": 0.2886898747850951,
+   "escalate": 0.05349258783859669,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 356,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "ins-3",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 430.0832999870181,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.96,
+   "tool": "insurance_check",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "insurance_check",
+     1.0
+    ],
+    [
+     "book_appointment",
+     0.0
+    ],
+    [
+     "clinic_info",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 721,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "ins-3",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 509.7127999761142,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "clm-voice",
+   "server_ms": 152.3,
+   "end_of_turn": 0.9858342677645862,
+   "tool": "insurance_check",
+   "tool_prob": 0.8436897918850683,
+   "tool_top3": [
+    [
+     "insurance_check",
+     0.8436897918850683
+    ],
+    [
+     "billing_question",
+     0.049135805877798526
+    ],
+    [
+     "clinic_info",
+     0.04697522624678259
+    ]
+   ],
+   "frustration": 0.3518843838234027,
+   "escalate": 0.06899454446261406,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 332,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "ins-4",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 365.3716000262648,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.06,
+   "tool": "insurance_check",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "insurance_check",
+     1.0
+    ],
+    [
+     "small_talk",
+     0.0
+    ],
+    [
+     "clinic_info",
+     0.0
+    ]
+   ],
+   "frustration": 0.01,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 733,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "ins-4",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 505.1124999881722,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 152.3,
+   "end_of_turn": 0.3221751700743426,
+   "tool": "billing_question",
+   "tool_prob": 0.9249844824052792,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.9249844824052792
+    ],
+    [
+     "insurance_check",
+     0.05046692907088151
+    ],
+    [
+     "book_appointment",
+     0.017248761969495385
+    ]
+   ],
+   "frustration": 1.078987353422086,
+   "escalate": 0.049899532925801744,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 384,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "info-1",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 366.7049999930896,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.97,
+   "tool": "clinic_info",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "clinic_info",
+     1.0
+    ],
+    [
+     "book_appointment",
+     0.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.05,
+   "usage": {
+    "input_tokens": 720,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "info-1",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 516.5137999574654,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "clm-voice",
+   "server_ms": 151.6,
+   "end_of_turn": 0.9780758903438652,
+   "tool": "clinic_info",
+   "tool_prob": 0.7974963279720388,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.7974963279720388
+    ],
+    [
+     "billing_question",
+     0.0791084526212088
+    ],
+    [
+     "reschedule_appointment",
+     0.045504302462578215
+    ]
+   ],
+   "frustration": 0.39896464071300264,
+   "escalate": 0.0586703891282931,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 328,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "info-2",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 393.16099998541176,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "clinic_info",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "clinic_info",
+     1.0
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ],
+    [
+     "book_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.05,
+   "usage": {
+    "input_tokens": 723,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "info-2",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 499.16849995497614,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "clm-voice",
+   "server_ms": 153.4,
+   "end_of_turn": 0.9773093393251925,
+   "tool": "clinic_info",
+   "tool_prob": 0.8501040294745109,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.8501040294745109
+    ],
+    [
+     "insurance_check",
+     0.06775186901137555
+    ],
+    [
+     "billing_question",
+     0.04968588919961844
+    ]
+   ],
+   "frustration": 0.38760785234240985,
+   "escalate": 0.06092823770361511,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 340,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "info-3",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 375.67110004602,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "clinic_info",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "clinic_info",
+     1.0
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ],
+    [
+     "cancel_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.05,
+   "usage": {
+    "input_tokens": 720,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "info-3",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 506.877199979499,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "clm-voice",
+   "server_ms": 151.5,
+   "end_of_turn": 0.9588293451169737,
+   "tool": "clinic_info",
+   "tool_prob": 0.4321733846628829,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.4321733846628829
+    ],
+    [
+     "billing_question",
+     0.26322864525955175
+    ],
+    [
+     "reschedule_appointment",
+     0.09468958850432528
+    ]
+   ],
+   "frustration": 0.5055063036784202,
+   "escalate": 0.05078566594583973,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 328,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "info-4",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 330.76230000006035,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "clinic_info",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "clinic_info",
+     1.0
+    ],
+    [
+     "book_appointment",
+     0.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 720,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "info-4",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 491.39810004271567,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "clm-voice",
+   "server_ms": 151.8,
+   "end_of_turn": 0.9437097755319894,
+   "tool": "clinic_info",
+   "tool_prob": 0.98493695753389,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.98493695753389
+    ],
+    [
+     "insurance_check",
+     0.007415199805044452
+    ],
+    [
+     "billing_question",
+     0.005719147192464466
+    ]
+   ],
+   "frustration": 0.35602596216670823,
+   "escalate": 0.06307456772787212,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 328,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "talk-1",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 425.2849000040442,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.6,
+   "tool": "small_talk",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "small_talk",
+     1.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ],
+    [
+     "cancel_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 719,
+    "output_tokens": 147
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "talk-1",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 489.2936000251211,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "clm-voice",
+   "server_ms": 151.9,
+   "end_of_turn": 0.953932162578244,
+   "tool": "small_talk",
+   "tool_prob": 0.9914734312639251,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.9914734312639251
+    ],
+    [
+     "clinic_info",
+     0.0028522126005919813
+    ],
+    [
+     "billing_question",
+     0.0024686385170252945
+    ]
+   ],
+   "frustration": 0.4009457418103393,
+   "escalate": 0.0359908490269305,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 324,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "talk-2",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 348.18100003758445,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.31,
+   "tool": "small_talk",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "small_talk",
+     1.0
+    ],
+    [
+     "book_appointment",
+     0.0
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.05,
+   "usage": {
+    "input_tokens": 719,
+    "output_tokens": 147
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "talk-2",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 523.1192999635823,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "clm-voice",
+   "server_ms": 151.8,
+   "end_of_turn": 0.8112044177777306,
+   "tool": "small_talk",
+   "tool_prob": 0.9875204397078043,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.9875204397078043
+    ],
+    [
+     "clinic_info",
+     0.00862776687162188
+    ],
+    [
+     "book_appointment",
+     0.0015960464094402626
+    ]
+   ],
+   "frustration": 0.3938755754580424,
+   "escalate": 0.04076680481461614,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 324,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "talk-3",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 359.260400000494,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "small_talk",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "small_talk",
+     1.0
+    ],
+    [
+     "clinic_info",
+     0.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ]
+   ],
+   "frustration": 0.06,
+   "escalate": 0.03,
+   "usage": {
+    "input_tokens": 725,
+    "output_tokens": 147
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "talk-3",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 497.3049000254832,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "clm-voice",
+   "server_ms": 153.1,
+   "end_of_turn": 0.8449565137258551,
+   "tool": "small_talk",
+   "tool_prob": 0.8755458511181069,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.8755458511181069
+    ],
+    [
+     "cancel_appointment",
+     0.10656885566751788
+    ],
+    [
+     "clinic_info",
+     0.0077754737079604765
+    ]
+   ],
+   "frustration": 0.5716999373913848,
+   "escalate": 0.04815617629588961,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 348,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "esc-1",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 397.90460001677275,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.84,
+   "tool": "clinic_info",
+   "tool_prob": 0.69,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.69
+    ],
+    [
+     "small_talk",
+     0.2
+    ],
+    [
+     "book_appointment",
+     0.11
+    ]
+   ],
+   "frustration": 2.97,
+   "escalate": 0.92,
+   "usage": {
+    "input_tokens": 722,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "esc-1",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 492.9677000036463,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "clm-voice",
+   "server_ms": 152.1,
+   "end_of_turn": 0.984268007670973,
+   "tool": "book_appointment",
+   "tool_prob": 0.4263433611077635,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.4263433611077635
+    ],
+    [
+     "billing_question",
+     0.40220127391084387
+    ],
+    [
+     "prescription_refill",
+     0.04470748640376903
+    ]
+   ],
+   "frustration": 1.3394132548887885,
+   "escalate": 0.5624309337293163,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 336,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "esc-2",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 369.5976000162773,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.87,
+   "tool": "book_appointment",
+   "tool_prob": 0.66,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.66
+    ],
+    [
+     "clinic_info",
+     0.23
+    ],
+    [
+     "small_talk",
+     0.11
+    ]
+   ],
+   "frustration": 2.78,
+   "escalate": 0.93,
+   "usage": {
+    "input_tokens": 725,
+    "output_tokens": 148
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "esc-2",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 498.1848999741487,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 152.2,
+   "end_of_turn": 0.9933414374550426,
+   "tool": "book_appointment",
+   "tool_prob": 0.5929994396729996,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.5929994396729996
+    ],
+    [
+     "prescription_refill",
+     0.26991496562894685
+    ],
+    [
+     "billing_question",
+     0.09595740466481728
+    ]
+   ],
+   "frustration": 0.5502358152878503,
+   "escalate": 0.4826643839192128,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 348,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "esc-3",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 468.48639997188,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.92,
+   "tool": "small_talk",
+   "tool_prob": 0.89,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.89
+    ],
+    [
+     "clinic_info",
+     0.11
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 2.19,
+   "escalate": 0.94,
+   "usage": {
+    "input_tokens": 725,
+    "output_tokens": 147
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "esc-3",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 500.22180000087246,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "clm-voice",
+   "server_ms": 152.2,
+   "end_of_turn": 0.8916523103708668,
+   "tool": "small_talk",
+   "tool_prob": 0.6739141084016153,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.6739141084016153
+    ],
+    [
+     "cancel_appointment",
+     0.18547543750105494
+    ],
+    [
+     "billing_question",
+     0.09069365808678509
+    ]
+   ],
+   "frustration": 0.6970520088884504,
+   "escalate": 0.26410991145571067,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 348,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "esc-4",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 380.42180001502857,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "small_talk",
+   "tool_prob": 0.86,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.86
+    ],
+    [
+     "clinic_info",
+     0.13
+    ],
+    [
+     "book_appointment",
+     0.01
+    ]
+   ],
+   "frustration": 2.68,
+   "escalate": 0.97,
+   "usage": {
+    "input_tokens": 733,
+    "output_tokens": 147
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "esc-4",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 508.50620004348457,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "clm-voice",
+   "server_ms": 152.4,
+   "end_of_turn": 0.7740520902086447,
+   "tool": "cancel_appointment",
+   "tool_prob": 0.43635761830617903,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     0.43635761830617903
+    ],
+    [
+     "billing_question",
+     0.38608297676065584
+    ],
+    [
+     "small_talk",
+     0.15483378834560574
+    ]
+   ],
+   "frustration": 1.7260590719478772,
+   "escalate": 0.7708757119518468,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 380,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "esc-5",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 381.2090000137687,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.89,
+   "tool": "book_appointment",
+   "tool_prob": 0.9,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.9
+    ],
+    [
+     "clinic_info",
+     0.08
+    ],
+    [
+     "small_talk",
+     0.02
+    ]
+   ],
+   "frustration": 2.75,
+   "escalate": 0.95,
+   "usage": {
+    "input_tokens": 728,
+    "output_tokens": 148
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "esc-5",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 508.5753999883309,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 152.5,
+   "end_of_turn": 0.9893547233101937,
+   "tool": "book_appointment",
+   "tool_prob": 0.6369504102527822,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.6369504102527822
+    ],
+    [
+     "prescription_refill",
+     0.12973598042195825
+    ],
+    [
+     "insurance_check",
+     0.12097290810147425
+    ]
+   ],
+   "frustration": 0.39907498138728775,
+   "escalate": 0.49864960045139667,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 360,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "eot-1",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 382.9367000143975,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.05,
+   "tool": "small_talk",
+   "tool_prob": 0.97,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.97
+    ],
+    [
+     "book_appointment",
+     0.02
+    ],
+    [
+     "clinic_info",
+     0.01
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 723,
+    "output_tokens": 147
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "eot-1",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 507.8374000149779,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 152.4,
+   "end_of_turn": 0.3863798983453078,
+   "tool": "small_talk",
+   "tool_prob": 0.7727334939586626,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.7727334939586626
+    ],
+    [
+     "billing_question",
+     0.17757198112017533
+    ],
+    [
+     "book_appointment",
+     0.025241713176835698
+    ]
+   ],
+   "frustration": 1.0084405122558366,
+   "escalate": 0.04864566797730584,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 344,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "eot-2",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 354.71300000790507,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.04,
+   "tool": "small_talk",
+   "tool_prob": 0.79,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.79
+    ],
+    [
+     "book_appointment",
+     0.12
+    ],
+    [
+     "clinic_info",
+     0.04
+    ]
+   ],
+   "frustration": 0.07,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 727,
+    "output_tokens": 147
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "eot-2",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 504.31720004417,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 150.6,
+   "end_of_turn": 0.15174869906376276,
+   "tool": "billing_question",
+   "tool_prob": 0.6708510525357547,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.6708510525357547
+    ],
+    [
+     "small_talk",
+     0.23327797267519476
+    ],
+    [
+     "reschedule_appointment",
+     0.04095715933613616
+    ]
+   ],
+   "frustration": 1.3001777138251462,
+   "escalate": 0.05976773261577147,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 360,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "eot-3",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 384.9309000070207,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.04,
+   "tool": "insurance_check",
+   "tool_prob": 0.54,
+   "tool_top3": [
+    [
+     "insurance_check",
+     0.54
+    ],
+    [
+     "small_talk",
+     0.46
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.04,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 726,
+    "output_tokens": 146
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "eot-3",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 504.44699998479337,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 150.7,
+   "end_of_turn": 0.29744443278923227,
+   "tool": "billing_question",
+   "tool_prob": 0.8412293520830135,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.8412293520830135
+    ],
+    [
+     "small_talk",
+     0.09622613907961992
+    ],
+    [
+     "reschedule_appointment",
+     0.0384589175005386
+    ]
+   ],
+   "frustration": 1.0226820446901497,
+   "escalate": 0.05476693955149247,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 356,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "eot-4",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 372.61030002264306,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.07,
+   "tool": "small_talk",
+   "tool_prob": 0.63,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.63
+    ],
+    [
+     "cancel_appointment",
+     0.36
+    ],
+    [
+     "reschedule_appointment",
+     0.01
+    ]
+   ],
+   "frustration": 0.08,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 725,
+    "output_tokens": 147
+   }
+  },
+  {
+   "n_tools": 8,
+   "case": "eot-4",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 502.6095000212081,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 153.0,
+   "end_of_turn": 0.43031566761621604,
+   "tool": "billing_question",
+   "tool_prob": 0.6445355953461919,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.6445355953461919
+    ],
+    [
+     "small_talk",
+     0.18935564067161548
+    ],
+    [
+     "reschedule_appointment",
+     0.08104075444142733
+    ]
+   ],
+   "frustration": 0.6824334190807819,
+   "escalate": 0.08940163914314782,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 352,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "book-1",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 342.68270002212375,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.93,
+   "tool": "book_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "book_appointment",
+     1.0
+    ],
+    [
+     "radiology_lab_results",
+     0.0
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.05,
+   "usage": {
+    "input_tokens": 2312,
+    "output_tokens": 815
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "book-1",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 345.85669997613877,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9740228633897459,
+   "tool": "book_appointment",
+   "tool_prob": 0.8395218188595658,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.8395218188595658
+    ],
+    [
+     "prescription_refill",
+     0.06823698588236739
+    ],
+    [
+     "reschedule_appointment",
+     0.06287460857835228
+    ]
+   ],
+   "frustration": 0.2959915329486149,
+   "escalate": 0.03661965660528398,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "book-2",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 405.1624999847263,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.89,
+   "tool": "book_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "book_appointment",
+     1.0
+    ],
+    [
+     "radiology_waitlist_join",
+     0.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 2313,
+    "output_tokens": 815
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "book-2",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 349.8822000110522,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9826833433987182,
+   "tool": "book_appointment",
+   "tool_prob": 0.8107900748387974,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.8107900748387974
+    ],
+    [
+     "prescription_refill",
+     0.06517189634440154
+    ],
+    [
+     "insurance_check",
+     0.055287254731686636
+    ]
+   ],
+   "frustration": 0.2766704120352244,
+   "escalate": 0.07186564150969645,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "book-3",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 372.49390000943094,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.93,
+   "tool": "book_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "book_appointment",
+     1.0
+    ],
+    [
+     "ent_lab_results",
+     0.0
+    ],
+    [
+     "orthopedics_waitlist_join",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 2310,
+    "output_tokens": 815
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "book-3",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 341.1153999622911,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9794165305880705,
+   "tool": "book_appointment",
+   "tool_prob": 0.8735567652306382,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.8735567652306382
+    ],
+    [
+     "prescription_refill",
+     0.03694991954026211
+    ],
+    [
+     "clinic_info",
+     0.03279831258523199
+    ]
+   ],
+   "frustration": 0.24616384404059263,
+   "escalate": 0.06594778197719915,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "book-4",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 385.4022999876179,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.89,
+   "tool": "book_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "book_appointment",
+     1.0
+    ],
+    [
+     "urology_lab_results",
+     0.0
+    ],
+    [
+     "sleep_lab_referral_status",
+     0.0
+    ]
+   ],
+   "frustration": 0.01,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 2308,
+    "output_tokens": 815
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "book-4",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 347.35140000702813,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 1.9,
+   "end_of_turn": 0.9697371438489117,
+   "tool": "book_appointment",
+   "tool_prob": 0.5228794010816764,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.5228794010816764
+    ],
+    [
+     "reschedule_appointment",
+     0.17248916593959762
+    ],
+    [
+     "clinic_info",
+     0.17212830526275594
+    ]
+   ],
+   "frustration": 0.3223002638939138,
+   "escalate": 0.039648279242911075,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "book-5",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 388.70339997811243,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "book_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "book_appointment",
+     1.0
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 2306,
+    "output_tokens": 815
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "book-5",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 355.4376999964006,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.99359485271355,
+   "tool": "book_appointment",
+   "tool_prob": 0.9095466149371584,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.9095466149371584
+    ],
+    [
+     "prescription_refill",
+     0.03279600747570687
+    ],
+    [
+     "clinic_info",
+     0.025293437490941997
+    ]
+   ],
+   "frustration": 0.2537375978405778,
+   "escalate": 0.05308651887857598,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "resched-1",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 407.6780999894254,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.96,
+   "tool": "reschedule_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     1.0
+    ],
+    [
+     "ent_lab_results",
+     0.0
+    ],
+    [
+     "orthopedics_waitlist_join",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 2304,
+    "output_tokens": 817
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "resched-1",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 349.1972999763675,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9771709560925673,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.9175043206949794,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.9175043206949794
+    ],
+    [
+     "cancel_appointment",
+     0.05931312047384903
+    ],
+    [
+     "book_appointment",
+     0.018405705666008135
+    ]
+   ],
+   "frustration": 0.23064090877027912,
+   "escalate": 0.0621798220773077,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "resched-2",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 420.63780000898987,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.84,
+   "tool": "reschedule_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     1.0
+    ],
+    [
+     "cardiology_referral_status",
+     0.0
+    ],
+    [
+     "orthopedics_waitlist_join",
+     0.0
+    ]
+   ],
+   "frustration": 0.02,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 2314,
+    "output_tokens": 817
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "resched-2",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 349.0542000508867,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 2.1,
+   "end_of_turn": 0.9208088715620276,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.6856042105271172,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.6856042105271172
+    ],
+    [
+     "book_appointment",
+     0.18222992758632772
+    ],
+    [
+     "billing_question",
+     0.0624151793274639
+    ]
+   ],
+   "frustration": 0.29784181369670437,
+   "escalate": 0.06875491945244498,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "resched-3",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 344.2129999748431,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "reschedule_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     1.0
+    ],
+    [
+     "pulmonology_referral_status",
+     0.0
+    ],
+    [
+     "neurology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 2311,
+    "output_tokens": 817
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "resched-3",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 345.9162999643013,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 1.9,
+   "end_of_turn": 0.954709973987005,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.7481253816653427,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.7481253816653427
+    ],
+    [
+     "billing_question",
+     0.12244578925131254
+    ],
+    [
+     "book_appointment",
+     0.05541235825874818
+    ]
+   ],
+   "frustration": 0.4120546631247083,
+   "escalate": 0.05526134042825316,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "resched-4",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 398.42549996683374,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.87,
+   "tool": "reschedule_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     1.0
+    ],
+    [
+     "home_care_referral_status",
+     0.0
+    ],
+    [
+     "psychiatry_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.02,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 2309,
+    "output_tokens": 817
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "resched-4",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 349.46579998359084,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9496902404127527,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.9372604867927493,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.9372604867927493
+    ],
+    [
+     "book_appointment",
+     0.036305367975943185
+    ],
+    [
+     "cancel_appointment",
+     0.021812396530488172
+    ]
+   ],
+   "frustration": 0.17578916356492397,
+   "escalate": 0.06339895352948657,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "cancel-1",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 395.46239998890087,
+   "reply": "I can cancel that. Can you confirm your full name and the appointment date?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "cancel_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     1.0
+    ],
+    [
+     "orthopedics_waitlist_join",
+     0.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 2307,
+    "output_tokens": 815
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "cancel-1",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 341.6434000246227,
+   "reply": "I can cancel that. Can you confirm your full name and the appointment date?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9856472201206716,
+   "tool": "cancel_appointment",
+   "tool_prob": 0.5485329416953248,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     0.5485329416953248
+    ],
+    [
+     "reschedule_appointment",
+     0.3766155842590781
+    ],
+    [
+     "book_appointment",
+     0.04500846607979671
+    ]
+   ],
+   "frustration": 0.3799464124436932,
+   "escalate": 0.04792667555957265,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "cancel-2",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 397.42500003194436,
+   "reply": "I can cancel that. Can you confirm your full name and the appointment date?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "cancel_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     1.0
+    ],
+    [
+     "dermatology_referral_status",
+     0.0
+    ],
+    [
+     "endocrinology_referral_status",
+     0.0
+    ]
+   ],
+   "frustration": 0.01,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 2310,
+    "output_tokens": 815
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "cancel-2",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 350.8628000272438,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 1.9,
+   "end_of_turn": 0.957525171054691,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.6852127545085044,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.6852127545085044
+    ],
+    [
+     "cancel_appointment",
+     0.303454135115011
+    ],
+    [
+     "billing_question",
+     0.004672062945939148
+    ]
+   ],
+   "frustration": 0.3359087479702406,
+   "escalate": 0.07212113964384836,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "cancel-3",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 392.86849997006357,
+   "reply": "I can cancel that. Can you confirm your full name and the appointment date?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.92,
+   "tool": "cancel_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     1.0
+    ],
+    [
+     "ophthalmology_referral_status",
+     0.0
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 2309,
+    "output_tokens": 815
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "cancel-3",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 342.2397000249475,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9677746694771623,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.4112576490379107,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.4112576490379107
+    ],
+    [
+     "cancel_appointment",
+     0.2974123045788109
+    ],
+    [
+     "billing_question",
+     0.17712954178559426
+    ]
+   ],
+   "frustration": 0.5680179199809364,
+   "escalate": 0.0779301527358394,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "refill-1",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 496.5836000046693,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.96,
+   "tool": "prescription_refill",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     1.0
+    ],
+    [
+     "orthopedics_referral_status",
+     0.0
+    ],
+    [
+     "pediatrics_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.09,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 2310,
+    "output_tokens": 816
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "refill-1",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 347.95970004051924,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9738752627016376,
+   "tool": "prescription_refill",
+   "tool_prob": 0.7800564447135322,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     0.7800564447135322
+    ],
+    [
+     "book_appointment",
+     0.1165734688456659
+    ],
+    [
+     "insurance_check",
+     0.07963703334128984
+    ]
+   ],
+   "frustration": 0.20592829290137077,
+   "escalate": 0.06980954008898678,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "refill-2",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 425.90180004481226,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.92,
+   "tool": "prescription_refill",
+   "tool_prob": 0.99,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     0.99
+    ],
+    [
+     "book_appointment",
+     0.01
+    ],
+    [
+     "ophthalmology_referral_status",
+     0.0
+    ]
+   ],
+   "frustration": 0.03,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 2309,
+    "output_tokens": 816
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "refill-2",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 350.37380002904683,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "clm-voice",
+   "server_ms": 1.9,
+   "end_of_turn": 0.9846737393044123,
+   "tool": "prescription_refill",
+   "tool_prob": 0.6446449724493105,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     0.6446449724493105
+    ],
+    [
+     "book_appointment",
+     0.2448887993068759
+    ],
+    [
+     "insurance_check",
+     0.06653997023871583
+    ]
+   ],
+   "frustration": 0.2817429006729514,
+   "escalate": 0.08320298312831488,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "refill-3",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 394.5975999813527,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "prescription_refill",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     1.0
+    ],
+    [
+     "sleep_lab_referral_status",
+     0.0
+    ],
+    [
+     "ophthalmology_referral_status",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 2311,
+    "output_tokens": 816
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "refill-3",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 343.65180000895634,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9223708379016659,
+   "tool": "prescription_refill",
+   "tool_prob": 0.8490324981608601,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     0.8490324981608601
+    ],
+    [
+     "reschedule_appointment",
+     0.04176737363183427
+    ],
+    [
+     "book_appointment",
+     0.03643376416899209
+    ]
+   ],
+   "frustration": 0.27960759367706456,
+   "escalate": 0.057202613246466444,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "refill-4",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 396.09649998601526,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.06,
+   "tool": "prescription_refill",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     1.0
+    ],
+    [
+     "radiology_waitlist_join",
+     0.0
+    ],
+    [
+     "dermatology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 2303,
+    "output_tokens": 816
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "refill-4",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 357.83430002629757,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.46988702783542663,
+   "tool": "billing_question",
+   "tool_prob": 0.5006530916494999,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.5006530916494999
+    ],
+    [
+     "book_appointment",
+     0.22883302565880137
+    ],
+    [
+     "prescription_refill",
+     0.1939644813746
+    ]
+   ],
+   "frustration": 0.6854227497858758,
+   "escalate": 0.054640789818265034,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "bill-1",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 399.0205000154674,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.93,
+   "tool": "billing_question",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "billing_question",
+     1.0
+    ],
+    [
+     "radiology_lab_results",
+     0.0
+    ],
+    [
+     "gastroenterology_referral_status",
+     0.0
+    ]
+   ],
+   "frustration": 0.66,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 2308,
+    "output_tokens": 813
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "bill-1",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 345.7473000162281,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9844283667991587,
+   "tool": "billing_question",
+   "tool_prob": 0.8342148178402251,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.8342148178402251
+    ],
+    [
+     "cancel_appointment",
+     0.052007222706482926
+    ],
+    [
+     "reschedule_appointment",
+     0.04352350315886275
+    ]
+   ],
+   "frustration": 0.742084756042259,
+   "escalate": 0.05864195395812416,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "bill-2",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 416.5549000026658,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.91,
+   "tool": "billing_question",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "billing_question",
+     1.0
+    ],
+    [
+     "cancel_appointment",
+     0.0
+    ],
+    [
+     "cardiology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.84,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 2307,
+    "output_tokens": 813
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "bill-2",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 345.0610000290908,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "clm-voice",
+   "server_ms": 1.9,
+   "end_of_turn": 0.8944434885420675,
+   "tool": "billing_question",
+   "tool_prob": 0.7943843904184861,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.7943843904184861
+    ],
+    [
+     "insurance_check",
+     0.13325268074859672
+    ],
+    [
+     "book_appointment",
+     0.021536657621081045
+    ]
+   ],
+   "frustration": 0.6878509658635407,
+   "escalate": 0.08628376978213612,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "bill-3",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 413.23689999990165,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.9,
+   "tool": "billing_question",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "billing_question",
+     1.0
+    ],
+    [
+     "radiology_lab_results",
+     0.0
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ]
+   ],
+   "frustration": 0.06,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 2311,
+    "output_tokens": 813
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "bill-3",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 343.6714999843389,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9519035888355201,
+   "tool": "billing_question",
+   "tool_prob": 0.8990010640318021,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.8990010640318021
+    ],
+    [
+     "insurance_check",
+     0.06170467250722984
+    ],
+    [
+     "clinic_info",
+     0.015075303870906899
+    ]
+   ],
+   "frustration": 0.3498389005099903,
+   "escalate": 0.04789718041433068,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "bill-4",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 380.1415000343695,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "billing_question",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "billing_question",
+     1.0
+    ],
+    [
+     "orthopedics_waitlist_join",
+     0.0
+    ],
+    [
+     "insurance_check",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 2306,
+    "output_tokens": 813
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "bill-4",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 341.51230001589283,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.975331353216678,
+   "tool": "billing_question",
+   "tool_prob": 0.4154230939216833,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.4154230939216833
+    ],
+    [
+     "insurance_check",
+     0.30439878727998587
+    ],
+    [
+     "book_appointment",
+     0.14651473828782563
+    ]
+   ],
+   "frustration": 0.6786290227899461,
+   "escalate": 0.051077652145931324,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "ins-1",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 529.1768999886699,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "insurance_check",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "insurance_check",
+     1.0
+    ],
+    [
+     "orthopedics_referral_status",
+     0.0
+    ],
+    [
+     "pediatrics_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 2301,
+    "output_tokens": 813
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "ins-1",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 348.5223999596201,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9424591594234037,
+   "tool": "insurance_check",
+   "tool_prob": 0.6992112540674428,
+   "tool_top3": [
+    [
+     "insurance_check",
+     0.6992112540674428
+    ],
+    [
+     "billing_question",
+     0.25135981675195607
+    ],
+    [
+     "book_appointment",
+     0.02425412358993714
+    ]
+   ],
+   "frustration": 0.5278947730417639,
+   "escalate": 0.0658564335001341,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "ins-2",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 376.1614999966696,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "insurance_check",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "insurance_check",
+     1.0
+    ],
+    [
+     "radiology_lab_results",
+     0.0
+    ],
+    [
+     "gastroenterology_referral_status",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 2309,
+    "output_tokens": 813
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "ins-2",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 351.85969999292865,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "clm-voice",
+   "server_ms": 2.1,
+   "end_of_turn": 0.976687868987316,
+   "tool": "insurance_check",
+   "tool_prob": 0.559925120867121,
+   "tool_top3": [
+    [
+     "insurance_check",
+     0.559925120867121
+    ],
+    [
+     "billing_question",
+     0.32337690596411756
+    ],
+    [
+     "book_appointment",
+     0.04272979994950476
+    ]
+   ],
+   "frustration": 0.2886898747850951,
+   "escalate": 0.05349258783859669,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "ins-3",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 344.1057000309229,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.96,
+   "tool": "insurance_check",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "insurance_check",
+     1.0
+    ],
+    [
+     "radiology_waitlist_join",
+     0.0
+    ],
+    [
+     "ent_referral_status",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 2303,
+    "output_tokens": 813
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "ins-3",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 339.160899980925,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "clm-voice",
+   "server_ms": 1.9,
+   "end_of_turn": 0.9858342677645862,
+   "tool": "insurance_check",
+   "tool_prob": 0.843581929687472,
+   "tool_top3": [
+    [
+     "insurance_check",
+     0.843581929687472
+    ],
+    [
+     "billing_question",
+     0.049129524071317494
+    ],
+    [
+     "clinic_info",
+     0.04696922066133602
+    ]
+   ],
+   "frustration": 0.3518843838234027,
+   "escalate": 0.06899454446261406,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "ins-4",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 372.0735000097193,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.06,
+   "tool": "insurance_check",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "insurance_check",
+     1.0
+    ],
+    [
+     "dental_lab_results",
+     0.0
+    ],
+    [
+     "dermatology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.01,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 2315,
+    "output_tokens": 813
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "ins-4",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 334.5642000203952,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.3221751700743426,
+   "tool": "billing_question",
+   "tool_prob": 0.9249614703631059,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.9249614703631059
+    ],
+    [
+     "insurance_check",
+     0.050465673539440474
+    ],
+    [
+     "book_appointment",
+     0.017248332849606966
+    ]
+   ],
+   "frustration": 1.078987353422086,
+   "escalate": 0.049899532925801744,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "info-1",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 356.51359998155385,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.97,
+   "tool": "clinic_info",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "clinic_info",
+     1.0
+    ],
+    [
+     "dental_lab_results",
+     0.0
+    ],
+    [
+     "dermatology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.05,
+   "usage": {
+    "input_tokens": 2302,
+    "output_tokens": 813
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "info-1",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 350.16640002140775,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "clm-voice",
+   "server_ms": 2.1,
+   "end_of_turn": 0.9780758903438652,
+   "tool": "clinic_info",
+   "tool_prob": 0.7972372621036756,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.7972372621036756
+    ],
+    [
+     "billing_question",
+     0.07908275432109839
+    ],
+    [
+     "reschedule_appointment",
+     0.045489520436356595
+    ]
+   ],
+   "frustration": 0.39896464071300264,
+   "escalate": 0.0586703891282931,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "info-2",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 420.199699990917,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "clinic_info",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "clinic_info",
+     1.0
+    ],
+    [
+     "cardiology_referral_status",
+     0.0
+    ],
+    [
+     "orthopedics_waitlist_join",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.05,
+   "usage": {
+    "input_tokens": 2305,
+    "output_tokens": 813
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "info-2",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 340.10679996572435,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "clm-voice",
+   "server_ms": 2.1,
+   "end_of_turn": 0.9773093393251925,
+   "tool": "clinic_info",
+   "tool_prob": 0.8500178657417058,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.8500178657417058
+    ],
+    [
+     "insurance_check",
+     0.06774500190601415
+    ],
+    [
+     "billing_question",
+     0.049680853202219585
+    ]
+   ],
+   "frustration": 0.38760785234240985,
+   "escalate": 0.06092823770361511,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "info-3",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 352.5253999978304,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.96,
+   "tool": "clinic_info",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "clinic_info",
+     1.0
+    ],
+    [
+     "nutrition_referral_status",
+     0.0
+    ],
+    [
+     "vaccination_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.05,
+   "usage": {
+    "input_tokens": 2302,
+    "output_tokens": 813
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "info-3",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 341.58240002579987,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9588293451169737,
+   "tool": "clinic_info",
+   "tool_prob": 0.4319600437145553,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.4319600437145553
+    ],
+    [
+     "billing_question",
+     0.2630987033177303
+    ],
+    [
+     "reschedule_appointment",
+     0.09464284530512522
+    ]
+   ],
+   "frustration": 0.5055063036784202,
+   "escalate": 0.05078566594583973,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "info-4",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 336.291000014171,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "clinic_info",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "clinic_info",
+     1.0
+    ],
+    [
+     "allergy_referral_status",
+     0.0
+    ],
+    [
+     "vaccination_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 2302,
+    "output_tokens": 813
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "info-4",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 350.65850004320964,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "clm-voice",
+   "server_ms": 2.1,
+   "end_of_turn": 0.9437097755319894,
+   "tool": "clinic_info",
+   "tool_prob": 0.9849216099750265,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.9849216099750265
+    ],
+    [
+     "insurance_check",
+     0.007415084259359399
+    ],
+    [
+     "billing_question",
+     0.005719058075138211
+    ]
+   ],
+   "frustration": 0.35602596216670823,
+   "escalate": 0.06307456772787212,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "talk-1",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 391.2201000493951,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.61,
+   "tool": "small_talk",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "small_talk",
+     1.0
+    ],
+    [
+     "endocrinology_referral_status",
+     0.0
+    ],
+    [
+     "ophthalmology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.05,
+   "usage": {
+    "input_tokens": 2301,
+    "output_tokens": 814
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "talk-1",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 344.22189998440444,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "clm-voice",
+   "server_ms": 2.1,
+   "end_of_turn": 0.953932162578244,
+   "tool": "small_talk",
+   "tool_prob": 0.9914558623094372,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.9914558623094372
+    ],
+    [
+     "clinic_info",
+     0.002852162059254423
+    ],
+    [
+     "billing_question",
+     0.002468594772638017
+    ]
+   ],
+   "frustration": 0.4009457418103393,
+   "escalate": 0.0359908490269305,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "talk-2",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 371.5083999559283,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.35,
+   "tool": "small_talk",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "small_talk",
+     1.0
+    ],
+    [
+     "home_care_referral_status",
+     0.0
+    ],
+    [
+     "psychiatry_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 2301,
+    "output_tokens": 814
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "talk-2",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 347.67920000012964,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.8112044177777306,
+   "tool": "small_talk",
+   "tool_prob": 0.9875039643862078,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.9875039643862078
+    ],
+    [
+     "clinic_info",
+     0.008627622930060617
+    ],
+    [
+     "book_appointment",
+     0.0015960197817606505
+    ]
+   ],
+   "frustration": 0.3938755754580424,
+   "escalate": 0.04076680481461614,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "talk-3",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 358.29020000528544,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "small_talk",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "small_talk",
+     1.0
+    ],
+    [
+     "radiology_lab_results",
+     0.0
+    ],
+    [
+     "gastroenterology_referral_status",
+     0.0
+    ]
+   ],
+   "frustration": 0.04,
+   "escalate": 0.03,
+   "usage": {
+    "input_tokens": 2307,
+    "output_tokens": 814
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "talk-3",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 340.3345000115223,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "clm-voice",
+   "server_ms": 1.9,
+   "end_of_turn": 0.8449565137258551,
+   "tool": "small_talk",
+   "tool_prob": 0.8753861297604821,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.8753861297604821
+    ],
+    [
+     "cancel_appointment",
+     0.10654941485549643
+    ],
+    [
+     "clinic_info",
+     0.007774055268006445
+    ]
+   ],
+   "frustration": 0.5716999373913848,
+   "escalate": 0.04815617629588961,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "esc-1",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 359.56199996871874,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.83,
+   "tool": "clinic_info",
+   "tool_prob": 0.49,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.49
+    ],
+    [
+     "small_talk",
+     0.33
+    ],
+    [
+     "book_appointment",
+     0.16
+    ]
+   ],
+   "frustration": 2.96,
+   "escalate": 0.93,
+   "usage": {
+    "input_tokens": 2304,
+    "output_tokens": 813
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "esc-1",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 344.05279997736216,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "clm-voice",
+   "server_ms": 1.9,
+   "end_of_turn": 0.984268007670973,
+   "tool": "book_appointment",
+   "tool_prob": 0.42497610539356867,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.42497610539356867
+    ],
+    [
+     "billing_question",
+     0.400911440316198
+    ],
+    [
+     "prescription_refill",
+     0.04456411237281423
+    ]
+   ],
+   "frustration": 1.3394132548887885,
+   "escalate": 0.5624309337293163,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "esc-2",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 474.63520005112514,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.87,
+   "tool": "book_appointment",
+   "tool_prob": 0.55,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.55
+    ],
+    [
+     "cardiology_waitlist_join",
+     0.14
+    ],
+    [
+     "clinic_info",
+     0.11
+    ]
+   ],
+   "frustration": 2.75,
+   "escalate": 0.94,
+   "usage": {
+    "input_tokens": 2307,
+    "output_tokens": 815
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "esc-2",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 339.21880001435056,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 1.9,
+   "end_of_turn": 0.9933414374550426,
+   "tool": "book_appointment",
+   "tool_prob": 0.5896385468125922,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.5896385468125922
+    ],
+    [
+     "prescription_refill",
+     0.26838519136575417
+    ],
+    [
+     "billing_question",
+     0.09541355498357804
+    ]
+   ],
+   "frustration": 0.5502358152878503,
+   "escalate": 0.4826643839192128,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "esc-3",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 353.43099996680394,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.92,
+   "tool": "small_talk",
+   "tool_prob": 0.88,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.88
+    ],
+    [
+     "clinic_info",
+     0.11
+    ],
+    [
+     "book_appointment",
+     0.01
+    ]
+   ],
+   "frustration": 2.17,
+   "escalate": 0.94,
+   "usage": {
+    "input_tokens": 2307,
+    "output_tokens": 814
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "esc-3",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 341.3259999942966,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.8916523103708668,
+   "tool": "small_talk",
+   "tool_prob": 0.6736213085355984,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.6736213085355984
+    ],
+    [
+     "cancel_appointment",
+     0.18539485277583154
+    ],
+    [
+     "billing_question",
+     0.0906542538205658
+    ]
+   ],
+   "frustration": 0.6970520088884504,
+   "escalate": 0.26410991145571067,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "esc-4",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 339.7339000366628,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "small_talk",
+   "tool_prob": 0.83,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.83
+    ],
+    [
+     "clinic_info",
+     0.14
+    ],
+    [
+     "book_appointment",
+     0.02
+    ]
+   ],
+   "frustration": 2.71,
+   "escalate": 0.97,
+   "usage": {
+    "input_tokens": 2315,
+    "output_tokens": 814
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "esc-4",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 343.62210001563653,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "clm-voice",
+   "server_ms": 2.1,
+   "end_of_turn": 0.7740520902086447,
+   "tool": "cancel_appointment",
+   "tool_prob": 0.43590006856477365,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     0.43590006856477365
+    ],
+    [
+     "billing_question",
+     0.38567814329661876
+    ],
+    [
+     "small_talk",
+     0.1546714349069438
+    ]
+   ],
+   "frustration": 1.7260590719478772,
+   "escalate": 0.7708757119518468,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "esc-5",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 417.00409998884425,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.89,
+   "tool": "book_appointment",
+   "tool_prob": 0.73,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.73
+    ],
+    [
+     "small_talk",
+     0.09999999999999999
+    ],
+    [
+     "clinic_info",
+     0.06
+    ]
+   ],
+   "frustration": 2.79,
+   "escalate": 0.95,
+   "usage": {
+    "input_tokens": 2310,
+    "output_tokens": 815
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "esc-5",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 349.1836999892257,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.9893547233101937,
+   "tool": "book_appointment",
+   "tool_prob": 0.6363176573496361,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.6363176573496361
+    ],
+    [
+     "prescription_refill",
+     0.12960709940244225
+    ],
+    [
+     "insurance_check",
+     0.12085273240557848
+    ]
+   ],
+   "frustration": 0.39907498138728775,
+   "escalate": 0.49864960045139667,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "eot-1",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 397.525200038217,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.06,
+   "tool": "small_talk",
+   "tool_prob": 0.95,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.95
+    ],
+    [
+     "book_appointment",
+     0.04
+    ],
+    [
+     "clinic_info",
+     0.01
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 2305,
+    "output_tokens": 814
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "eot-1",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 359.3387000146322,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.3863798983453078,
+   "tool": "small_talk",
+   "tool_prob": 0.772695547729913,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.772695547729913
+    ],
+    [
+     "billing_question",
+     0.17756326118365415
+    ],
+    [
+     "book_appointment",
+     0.02524047364492757
+    ]
+   ],
+   "frustration": 1.0084405122558366,
+   "escalate": 0.04864566797730584,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "eot-2",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 362.8063999931328,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.04,
+   "tool": "small_talk",
+   "tool_prob": 0.84,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.84
+    ],
+    [
+     "book_appointment",
+     0.11
+    ],
+    [
+     "clinic_info",
+     0.03
+    ]
+   ],
+   "frustration": 0.06,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 2309,
+    "output_tokens": 814
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "eot-2",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 348.57969998847693,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.15174869906376276,
+   "tool": "billing_question",
+   "tool_prob": 0.6706251109375198,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.6706251109375198
+    ],
+    [
+     "small_talk",
+     0.23319940501434067
+    ],
+    [
+     "reschedule_appointment",
+     0.040943365028137994
+    ]
+   ],
+   "frustration": 1.3001777138251462,
+   "escalate": 0.05976773261577147,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "eot-3",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 360.8523999573663,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.05,
+   "tool": "small_talk",
+   "tool_prob": 0.55,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.55
+    ],
+    [
+     "insurance_check",
+     0.45
+    ],
+    [
+     "gastroenterology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.03,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 2308,
+    "output_tokens": 814
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "eot-3",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 363.425699993968,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.29744443278923227,
+   "tool": "billing_question",
+   "tool_prob": 0.8411376498280966,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.8411376498280966
+    ],
+    [
+     "small_talk",
+     0.0962156494861295
+    ],
+    [
+     "reschedule_appointment",
+     0.03845472510110825
+    ]
+   ],
+   "frustration": 1.0226820446901497,
+   "escalate": 0.05476693955149247,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "eot-4",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 409.92399997776374,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.07,
+   "tool": "small_talk",
+   "tool_prob": 0.52,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.52
+    ],
+    [
+     "cancel_appointment",
+     0.47000000000000003
+    ],
+    [
+     "book_appointment",
+     0.01
+    ]
+   ],
+   "frustration": 0.09,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 2307,
+    "output_tokens": 814
+   }
+  },
+  {
+   "n_tools": 64,
+   "case": "eot-4",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 345.664799970109,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 2.0,
+   "end_of_turn": 0.43031566761621604,
+   "tool": "billing_question",
+   "tool_prob": 0.644429816080056,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.644429816080056
+    ],
+    [
+     "small_talk",
+     0.18932456418669588
+    ],
+    [
+     "reschedule_appointment",
+     0.08102745427368827
+    ]
+   ],
+   "frustration": 0.6824334190807819,
+   "escalate": 0.08940163914314782,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "book-1",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 543.2868000352755,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.93,
+   "tool": "book_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "book_appointment",
+     1.0
+    ],
+    [
+     "vaccination_group_class",
+     0.0
+    ],
+    [
+     "vaccination_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 7575,
+    "output_tokens": 3168
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "book-1",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 346.3068000273779,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.9740228633897459,
+   "tool": "book_appointment",
+   "tool_prob": 0.7897523845684432,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.7897523845684432
+    ],
+    [
+     "prescription_refill",
+     0.0641916875842122
+    ],
+    [
+     "reschedule_appointment",
+     0.05914720849187066
+    ]
+   ],
+   "frustration": 0.2959915329486149,
+   "escalate": 0.03661965660528398,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "book-2",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 384.1009000316262,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.89,
+   "tool": "book_appointment",
+   "tool_prob": 0.99,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.99
+    ],
+    [
+     "pediatrics_specialist_directory",
+     0.01
+    ],
+    [
+     "radiology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 7576,
+    "output_tokens": 3168
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "book-2",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 604.1021000128239,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.9826833433987182,
+   "tool": "book_appointment",
+   "tool_prob": 0.7227930483738558,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.7227930483738558
+    ],
+    [
+     "home_care_second_opinion",
+     0.07628128050556711
+    ],
+    [
+     "prescription_refill",
+     0.058098631309023596
+    ]
+   ],
+   "frustration": 0.2766704120352244,
+   "escalate": 0.07186564150969645,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "book-3",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 431.0389999882318,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.93,
+   "tool": "book_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "book_appointment",
+     1.0
+    ],
+    [
+     "vaccination_group_class",
+     0.0
+    ],
+    [
+     "vaccination_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 7573,
+    "output_tokens": 3168
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "book-3",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 607.996299979277,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.9794165305880705,
+   "tool": "book_appointment",
+   "tool_prob": 0.780342184613945,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.780342184613945
+    ],
+    [
+     "home_care_second_opinion",
+     0.055075913094313034
+    ],
+    [
+     "prescription_refill",
+     0.033007106215638925
+    ]
+   ],
+   "frustration": 0.24616384404059263,
+   "escalate": 0.06594778197719915,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "book-4",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 421.84460000135005,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.9,
+   "tool": "book_appointment",
+   "tool_prob": 0.99,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.99
+    ],
+    [
+     "clinic_info",
+     0.01
+    ],
+    [
+     "cardiology_records_request",
+     0.0
+    ]
+   ],
+   "frustration": 0.01,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 7571,
+    "output_tokens": 3168
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "book-4",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 604.7623999766074,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.9697371438489117,
+   "tool": "book_appointment",
+   "tool_prob": 0.48278747513655235,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.48278747513655235
+    ],
+    [
+     "reschedule_appointment",
+     0.15926351036226816
+    ],
+    [
+     "clinic_info",
+     0.15893031877987257
+    ]
+   ],
+   "frustration": 0.3223002638939138,
+   "escalate": 0.039648279242911075,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "book-5",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 379.5852999901399,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "book_appointment",
+   "tool_prob": 0.98,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.98
+    ],
+    [
+     "vaccination_specialist_directory",
+     0.02
+    ],
+    [
+     "radiology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.05,
+   "usage": {
+    "input_tokens": 7569,
+    "output_tokens": 3168
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "book-5",
+   "gold": {
+    "tool": "book_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 703.239599999506,
+   "reply": "Sure, I can book that for you. Which day and time work best?",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.99359485271355,
+   "tool": "book_appointment",
+   "tool_prob": 0.868968163191269,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.868968163191269
+    ],
+    [
+     "prescription_refill",
+     0.03133284859527638
+    ],
+    [
+     "clinic_info",
+     0.024164997765194932
+    ]
+   ],
+   "frustration": 0.2537375978405778,
+   "escalate": 0.05308651887857598,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "resched-1",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 423.42959996312857,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.96,
+   "tool": "reschedule_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     1.0
+    ],
+    [
+     "radiology_group_class",
+     0.0
+    ],
+    [
+     "cardiology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 7567,
+    "output_tokens": 3170
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "resched-1",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 599.815999972634,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.9771709560925673,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.9147504996043612,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.9147504996043612
+    ],
+    [
+     "cancel_appointment",
+     0.0591350965469562
+    ],
+    [
+     "book_appointment",
+     0.01835046230714049
+    ]
+   ],
+   "frustration": 0.23064090877027912,
+   "escalate": 0.0621798220773077,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "resched-2",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 451.0372999939136,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.87,
+   "tool": "reschedule_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     1.0
+    ],
+    [
+     "dermatology_referral_status",
+     0.0
+    ],
+    [
+     "endocrinology_referral_status",
+     0.0
+    ]
+   ],
+   "frustration": 0.02,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 7577,
+    "output_tokens": 3170
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "resched-2",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 361.4112000213936,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.9208088715620276,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.6710151095566491,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.6710151095566491
+    ],
+    [
+     "book_appointment",
+     0.17835222267644393
+    ],
+    [
+     "billing_question",
+     0.06108703498512075
+    ]
+   ],
+   "frustration": 0.29784181369670437,
+   "escalate": 0.06875491945244498,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "resched-3",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 442.7412999793887,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.93,
+   "tool": "reschedule_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     1.0
+    ],
+    [
+     "physiotherapy_second_opinion",
+     0.0
+    ],
+    [
+     "gastroenterology_referral_status",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 7574,
+    "output_tokens": 3170
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "resched-3",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 349.99070002231747,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.954709973987005,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.715590925376083,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.715590925376083
+    ],
+    [
+     "billing_question",
+     0.1171208700922634
+    ],
+    [
+     "book_appointment",
+     0.05300258712701495
+    ]
+   ],
+   "frustration": 0.4120546631247083,
+   "escalate": 0.05526134042825316,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "resched-4",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 388.8089000247419,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.86,
+   "tool": "reschedule_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     1.0
+    ],
+    [
+     "oncology_equipment_rental",
+     0.0
+    ],
+    [
+     "physiotherapy_telehealth_link",
+     0.0
+    ]
+   ],
+   "frustration": 0.02,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 7572,
+    "output_tokens": 3170
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "resched-4",
+   "gold": {
+    "tool": "reschedule_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 351.31270001875237,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.9496902404127527,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.9346571604947883,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.9346571604947883
+    ],
+    [
+     "book_appointment",
+     0.03620452651240049
+    ],
+    [
+     "cancel_appointment",
+     0.021751810614075877
+    ]
+   ],
+   "frustration": 0.17578916356492397,
+   "escalate": 0.06339895352948657,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "cancel-1",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 405.388800019864,
+   "reply": "I can cancel that. Can you confirm your full name and the appointment date?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "cancel_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     1.0
+    ],
+    [
+     "nutrition_waitlist_join",
+     0.0
+    ],
+    [
+     "home_care_waitlist_join",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 7570,
+    "output_tokens": 3168
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "cancel-1",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 350.45440000249073,
+   "reply": "I can cancel that. Can you confirm your full name and the appointment date?",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.9856472201206716,
+   "tool": "cancel_appointment",
+   "tool_prob": 0.5388070850085281,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     0.5388070850085281
+    ],
+    [
+     "reschedule_appointment",
+     0.36993793753981774
+    ],
+    [
+     "book_appointment",
+     0.04421043581121934
+    ]
+   ],
+   "frustration": 0.3799464124436932,
+   "escalate": 0.04792667555957265,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "cancel-2",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 722.3092999774963,
+   "reply": "I can cancel that. Can you confirm your full name and the appointment date?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "cancel_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     1.0
+    ],
+    [
+     "ophthalmology_telehealth_link",
+     0.0
+    ],
+    [
+     "neurology_telehealth_link",
+     0.0
+    ]
+   ],
+   "frustration": 0.01,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 7573,
+    "output_tokens": 3168
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "cancel-2",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 348.7108999979682,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 2.5,
+   "end_of_turn": 0.957525171054691,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.6833748241580003,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.6833748241580003
+    ],
+    [
+     "cancel_appointment",
+     0.30264018709486085
+    ],
+    [
+     "billing_question",
+     0.004659531179372767
+    ]
+   ],
+   "frustration": 0.3359087479702406,
+   "escalate": 0.07212113964384836,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "cancel-3",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 438.7428000336513,
+   "reply": "I can cancel that. Can you confirm your full name and the appointment date?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.91,
+   "tool": "cancel_appointment",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     1.0
+    ],
+    [
+     "dental_group_class",
+     0.0
+    ],
+    [
+     "dental_second_opinion",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 7572,
+    "output_tokens": 3168
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "cancel-3",
+   "gold": {
+    "tool": "cancel_appointment",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 355.4512999835424,
+   "reply": "No problem. What's the date of your current appointment, and when would you like to move it to?",
+   "model": "clm-voice",
+   "server_ms": 2.5,
+   "end_of_turn": 0.9677746694771623,
+   "tool": "reschedule_appointment",
+   "tool_prob": 0.3801348453995478,
+   "tool_top3": [
+    [
+     "reschedule_appointment",
+     0.3801348453995478
+    ],
+    [
+     "cancel_appointment",
+     0.27490499127608364
+    ],
+    [
+     "billing_question",
+     0.1637248842419772
+    ]
+   ],
+   "frustration": 0.5680179199809364,
+   "escalate": 0.0779301527358394,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "refill-1",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 445.5152000300586,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.96,
+   "tool": "prescription_refill",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     1.0
+    ],
+    [
+     "pulmonology_telehealth_link",
+     0.0
+    ],
+    [
+     "rheumatology_second_opinion",
+     0.0
+    ]
+   ],
+   "frustration": 0.1,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 7573,
+    "output_tokens": 3169
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "refill-1",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 360.7855000300333,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.9738752627016376,
+   "tool": "prescription_refill",
+   "tool_prob": 0.6501352943376072,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     0.6501352943376072
+    ],
+    [
+     "book_appointment",
+     0.09715774671634876
+    ],
+    [
+     "home_care_second_opinion",
+     0.081355040290324
+    ]
+   ],
+   "frustration": 0.20592829290137077,
+   "escalate": 0.06980954008898678,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "refill-2",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 453.595100028906,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.92,
+   "tool": "prescription_refill",
+   "tool_prob": 0.97,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     0.97
+    ],
+    [
+     "book_appointment",
+     0.03
+    ],
+    [
+     "vaccination_group_class",
+     0.0
+    ]
+   ],
+   "frustration": 0.02,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 7572,
+    "output_tokens": 3169
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "refill-2",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 349.38990004593506,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.9846737393044123,
+   "tool": "prescription_refill",
+   "tool_prob": 0.48995234635965734,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     0.48995234635965734
+    ],
+    [
+     "book_appointment",
+     0.18612390842315552
+    ],
+    [
+     "home_care_second_opinion",
+     0.1516736585805364
+    ]
+   ],
+   "frustration": 0.2817429006729514,
+   "escalate": 0.08320298312831488,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "refill-3",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 408.49810000509024,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "prescription_refill",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     1.0
+    ],
+    [
+     "ophthalmology_telehealth_link",
+     0.0
+    ],
+    [
+     "pulmonology_prep_instructions",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 7574,
+    "output_tokens": 3169
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "refill-3",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 351.79149999748915,
+   "reply": "I'll send a refill request to your doctor. Which medication is it for?",
+   "model": "clm-voice",
+   "server_ms": 2.5,
+   "end_of_turn": 0.9223708379016659,
+   "tool": "prescription_refill",
+   "tool_prob": 0.7984435860216086,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     0.7984435860216086
+    ],
+    [
+     "reschedule_appointment",
+     0.03927869858167402
+    ],
+    [
+     "book_appointment",
+     0.03426288790873127
+    ]
+   ],
+   "frustration": 0.27960759367706456,
+   "escalate": 0.057202613246466444,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "refill-4",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 408.7227000272833,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.06,
+   "tool": "prescription_refill",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "prescription_refill",
+     1.0
+    ],
+    [
+     "dermatology_prep_instructions",
+     0.0
+    ],
+    [
+     "cardiology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 7566,
+    "output_tokens": 3169
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "refill-4",
+   "gold": {
+    "tool": "prescription_refill",
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 347.08049998153,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.46988702783542663,
+   "tool": "billing_question",
+   "tool_prob": 0.46273218417431994,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.46273218417431994
+    ],
+    [
+     "book_appointment",
+     0.2115005530584965
+    ],
+    [
+     "prescription_refill",
+     0.17927305276992694
+    ]
+   ],
+   "frustration": 0.6854227497858758,
+   "escalate": 0.054640789818265034,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "bill-1",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 404.447800014168,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.93,
+   "tool": "billing_question",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "billing_question",
+     1.0
+    ],
+    [
+     "radiology_group_class",
+     0.0
+    ],
+    [
+     "cardiology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.7,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 7571,
+    "output_tokens": 3166
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "bill-1",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 346.3993000332266,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.9844283667991587,
+   "tool": "billing_question",
+   "tool_prob": 0.7953596958701847,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.7953596958701847
+    ],
+    [
+     "cancel_appointment",
+     0.049584888628535065
+    ],
+    [
+     "reschedule_appointment",
+     0.04149631425303712
+    ]
+   ],
+   "frustration": 0.742084756042259,
+   "escalate": 0.05864195395812416,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "bill-2",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 403.4634999698028,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.92,
+   "tool": "billing_question",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "billing_question",
+     1.0
+    ],
+    [
+     "radiology_lab_results",
+     0.0
+    ],
+    [
+     "gastroenterology_equipment_rental",
+     0.0
+    ]
+   ],
+   "frustration": 0.87,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 7570,
+    "output_tokens": 3166
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "bill-2",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 354.0182000142522,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.8944434885420675,
+   "tool": "billing_question",
+   "tool_prob": 0.7123927034001247,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.7123927034001247
+    ],
+    [
+     "insurance_check",
+     0.11949912236291282
+    ],
+    [
+     "home_care_second_opinion",
+     0.09323088460062798
+    ]
+   ],
+   "frustration": 0.6878509658635407,
+   "escalate": 0.08628376978213612,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "bill-3",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 457.01849996112287,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.9,
+   "tool": "billing_question",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "billing_question",
+     1.0
+    ],
+    [
+     "vaccination_group_class",
+     0.0
+    ],
+    [
+     "vaccination_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.06,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 7574,
+    "output_tokens": 3166
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "bill-3",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 356.70020000543445,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "clm-voice",
+   "server_ms": 2.2,
+   "end_of_turn": 0.9519035888355201,
+   "tool": "billing_question",
+   "tool_prob": 0.8461045890551011,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.8461045890551011
+    ],
+    [
+     "insurance_check",
+     0.058074020891995766
+    ],
+    [
+     "home_care_second_opinion",
+     0.05350764271816377
+    ]
+   ],
+   "frustration": 0.3498389005099903,
+   "escalate": 0.04789718041433068,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "bill-4",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 455.48990002134815,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "billing_question",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "billing_question",
+     1.0
+    ],
+    [
+     "oncology_second_opinion",
+     0.0
+    ],
+    [
+     "neurology_specialist_directory",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 7569,
+    "output_tokens": 3166
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "bill-4",
+   "gold": {
+    "tool": "billing_question",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 358.8428000221029,
+   "reply": "Let me pull up your account. Can you tell me the date on the bill you're asking about?",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.975331353216678,
+   "tool": "billing_question",
+   "tool_prob": 0.3224310938853059,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.3224310938853059
+    ],
+    [
+     "insurance_check",
+     0.23625945547107557
+    ],
+    [
+     "home_care_second_opinion",
+     0.1861310460838573
+    ]
+   ],
+   "frustration": 0.6786290227899461,
+   "escalate": 0.051077652145931324,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "ins-1",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 459.2912999796681,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "insurance_check",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "insurance_check",
+     1.0
+    ],
+    [
+     "vaccination_group_class",
+     0.0
+    ],
+    [
+     "vaccination_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 7564,
+    "output_tokens": 3166
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "ins-1",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 351.9034999771975,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "clm-voice",
+   "server_ms": 2.6,
+   "end_of_turn": 0.9424591594234037,
+   "tool": "insurance_check",
+   "tool_prob": 0.6434638327670018,
+   "tool_top3": [
+    [
+     "insurance_check",
+     0.6434638327670018
+    ],
+    [
+     "billing_question",
+     0.23131914732485712
+    ],
+    [
+     "home_care_second_opinion",
+     0.06634740235439804
+    ]
+   ],
+   "frustration": 0.5278947730417639,
+   "escalate": 0.0658564335001341,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "ins-2",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 440.5943999881856,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "insurance_check",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "insurance_check",
+     1.0
+    ],
+    [
+     "radiology_group_class",
+     0.0
+    ],
+    [
+     "cardiology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 7572,
+    "output_tokens": 3166
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "ins-2",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 349.12939998321235,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.976687868987316,
+   "tool": "insurance_check",
+   "tool_prob": 0.39516497345688717,
+   "tool_top3": [
+    [
+     "insurance_check",
+     0.39516497345688717
+    ],
+    [
+     "home_care_second_opinion",
+     0.2658827622645752
+    ],
+    [
+     "billing_question",
+     0.22822199201204751
+    ]
+   ],
+   "frustration": 0.2886898747850951,
+   "escalate": 0.05349258783859669,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "ins-3",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 413.5006000287831,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.96,
+   "tool": "insurance_check",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "insurance_check",
+     1.0
+    ],
+    [
+     "cardiology_waitlist_join",
+     0.0
+    ],
+    [
+     "maternity_records_request",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 7566,
+    "output_tokens": 3166
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "ins-3",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 353.6043000058271,
+   "reply": "Happy to check. Which insurance provider and plan do you have?",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.9858342677645862,
+   "tool": "insurance_check",
+   "tool_prob": 0.7398653158753945,
+   "tool_top3": [
+    [
+     "insurance_check",
+     0.7398653158753945
+    ],
+    [
+     "home_care_second_opinion",
+     0.1031976657538858
+    ],
+    [
+     "billing_question",
+     0.043089153011254856
+    ]
+   ],
+   "frustration": 0.3518843838234027,
+   "escalate": 0.06899454446261406,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "ins-4",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 430.1499000284821,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.06,
+   "tool": "insurance_check",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "insurance_check",
+     1.0
+    ],
+    [
+     "physiotherapy_second_opinion",
+     0.0
+    ],
+    [
+     "nutrition_referral_status",
+     0.0
+    ]
+   ],
+   "frustration": 0.01,
+   "escalate": 0.07,
+   "usage": {
+    "input_tokens": 7578,
+    "output_tokens": 3166
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "ins-4",
+   "gold": {
+    "tool": "insurance_check",
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 352.0709999720566,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.3221751700743426,
+   "tool": "billing_question",
+   "tool_prob": 0.9130769257683681,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.9130769257683681
+    ],
+    [
+     "insurance_check",
+     0.04981725566810198
+    ],
+    [
+     "book_appointment",
+     0.017026714341697047
+    ]
+   ],
+   "frustration": 1.078987353422086,
+   "escalate": 0.049899532925801744,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "info-1",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 404.1435000253841,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.97,
+   "tool": "clinic_info",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "clinic_info",
+     1.0
+    ],
+    [
+     "radiology_group_class",
+     0.0
+    ],
+    [
+     "cardiology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.04,
+   "usage": {
+    "input_tokens": 7565,
+    "output_tokens": 3166
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "info-1",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 349.74929998861626,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.9780758903438652,
+   "tool": "clinic_info",
+   "tool_prob": 0.7485468955909967,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.7485468955909967
+    ],
+    [
+     "billing_question",
+     0.07425286430496204
+    ],
+    [
+     "home_care_second_opinion",
+     0.04595785434047471
+    ]
+   ],
+   "frustration": 0.39896464071300264,
+   "escalate": 0.0586703891282931,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "info-2",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 476.0039999964647,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "clinic_info",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "clinic_info",
+     1.0
+    ],
+    [
+     "maternity_records_request",
+     0.0
+    ],
+    [
+     "dental_second_opinion",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 7568,
+    "output_tokens": 3166
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "info-2",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 368.2033999939449,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.9773093393251925,
+   "tool": "clinic_info",
+   "tool_prob": 0.8194097971171149,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.8194097971171149
+    ],
+    [
+     "insurance_check",
+     0.0653055900408259
+    ],
+    [
+     "billing_question",
+     0.04789190849243412
+    ]
+   ],
+   "frustration": 0.38760785234240985,
+   "escalate": 0.06092823770361511,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "info-3",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 440.28469995828345,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "clinic_info",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "clinic_info",
+     1.0
+    ],
+    [
+     "radiology_records_request",
+     0.0
+    ],
+    [
+     "pulmonology_prep_instructions",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.05,
+   "usage": {
+    "input_tokens": 7565,
+    "output_tokens": 3166
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "info-3",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 357.9052000422962,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.9588293451169737,
+   "tool": "clinic_info",
+   "tool_prob": 0.38149679704115286,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.38149679704115286
+    ],
+    [
+     "billing_question",
+     0.2323624929710426
+    ],
+    [
+     "home_care_second_opinion",
+     0.08870738527556049
+    ]
+   ],
+   "frustration": 0.5055063036784202,
+   "escalate": 0.05078566594583973,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "info-4",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 391.58200001111254,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.95,
+   "tool": "clinic_info",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "clinic_info",
+     1.0
+    ],
+    [
+     "orthopedics_referral_status",
+     0.0
+    ],
+    [
+     "dental_prep_instructions",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 7565,
+    "output_tokens": 3166
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "info-4",
+   "gold": {
+    "tool": "clinic_info",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 343.8929000403732,
+   "reply": "We're open 8 AM to 6 PM on weekdays at 42 Maple Street, with free parking behind the building.",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.9437097755319894,
+   "tool": "clinic_info",
+   "tool_prob": 0.9519664886318334,
+   "tool_top3": [
+    [
+     "clinic_info",
+     0.9519664886318334
+    ],
+    [
+     "home_care_second_opinion",
+     0.02917543370930794
+    ],
+    [
+     "insurance_check",
+     0.007166978218165535
+    ]
+   ],
+   "frustration": 0.35602596216670823,
+   "escalate": 0.06307456772787212,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "talk-1",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 386.7280000122264,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.59,
+   "tool": "small_talk",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "small_talk",
+     1.0
+    ],
+    [
+     "sleep_lab_group_class",
+     0.0
+    ],
+    [
+     "rheumatology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.05,
+   "usage": {
+    "input_tokens": 7564,
+    "output_tokens": 3167
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "talk-1",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 347.0163000165485,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.953932162578244,
+   "tool": "small_talk",
+   "tool_prob": 0.988410954168753,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.988410954168753
+    ],
+    [
+     "clinic_info",
+     0.002843402646149996
+    ],
+    [
+     "billing_question",
+     0.002461013351613639
+    ]
+   ],
+   "frustration": 0.4009457418103393,
+   "escalate": 0.0359908490269305,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "talk-2",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 401.6922999871895,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.35,
+   "tool": "small_talk",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "small_talk",
+     1.0
+    ],
+    [
+     "reschedule_appointment",
+     0.0
+    ],
+    [
+     "pharmacy_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 7564,
+    "output_tokens": 3167
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "talk-2",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 364.60169998463243,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.8112044177777306,
+   "tool": "small_talk",
+   "tool_prob": 0.9811235816411165,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.9811235816411165
+    ],
+    [
+     "clinic_info",
+     0.008571878813115904
+    ],
+    [
+     "home_care_second_opinion",
+     0.0027948394405363864
+    ]
+   ],
+   "frustration": 0.3938755754580424,
+   "escalate": 0.04076680481461614,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "talk-3",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 434.6163999871351,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.94,
+   "tool": "small_talk",
+   "tool_prob": 1.0,
+   "tool_top3": [
+    [
+     "small_talk",
+     1.0
+    ],
+    [
+     "radiology_group_class",
+     0.0
+    ],
+    [
+     "cardiology_lab_results",
+     0.0
+    ]
+   ],
+   "frustration": 0.06,
+   "escalate": 0.03,
+   "usage": {
+    "input_tokens": 7570,
+    "output_tokens": 3167
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "talk-3",
+   "gold": {
+    "tool": "small_talk",
+    "escalate": false,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 351.7445000470616,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.8449565137258551,
+   "tool": "small_talk",
+   "tool_prob": 0.8738588971127624,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.8738588971127624
+    ],
+    [
+     "cancel_appointment",
+     0.10636352460726134
+    ],
+    [
+     "clinic_info",
+     0.007760492349190579
+    ]
+   ],
+   "frustration": 0.5716999373913848,
+   "escalate": 0.04815617629588961,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "esc-1",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 441.9530999730341,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.84,
+   "tool": "small_talk",
+   "tool_prob": 0.4,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.4
+    ],
+    [
+     "clinic_info",
+     0.35000000000000003
+    ],
+    [
+     "book_appointment",
+     0.11
+    ]
+   ],
+   "frustration": 2.97,
+   "escalate": 0.92,
+   "usage": {
+    "input_tokens": 7567,
+    "output_tokens": 3167
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "esc-1",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 351.4001999865286,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.984268007670973,
+   "tool": "home_care_second_opinion",
+   "tool_prob": 0.5785579730516004,
+   "tool_top3": [
+    [
+     "home_care_second_opinion",
+     0.5785579730516004
+    ],
+    [
+     "book_appointment",
+     0.15737330542205735
+    ],
+    [
+     "billing_question",
+     0.14846189642979574
+    ]
+   ],
+   "frustration": 1.3394132548887885,
+   "escalate": 0.5624309337293163,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "esc-2",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 431.58349994337186,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.86,
+   "tool": "book_appointment",
+   "tool_prob": 0.33,
+   "tool_top3": [
+    [
+     "book_appointment",
+     0.33
+    ],
+    [
+     "small_talk",
+     0.19
+    ],
+    [
+     "clinic_info",
+     0.13
+    ]
+   ],
+   "frustration": 2.74,
+   "escalate": 0.94,
+   "usage": {
+    "input_tokens": 7570,
+    "output_tokens": 3168
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "esc-2",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 349.36609998112544,
+   "reply": "Let me route you to the right team for that.",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.9933414374550426,
+   "tool": "home_care_second_opinion",
+   "tool_prob": 0.39534835893878134,
+   "tool_top3": [
+    [
+     "home_care_second_opinion",
+     0.39534835893878134
+    ],
+    [
+     "book_appointment",
+     0.27692464140851675
+    ],
+    [
+     "prescription_refill",
+     0.12604751382025894
+    ]
+   ],
+   "frustration": 0.5502358152878503,
+   "escalate": 0.4826643839192128,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "esc-3",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 438.287400000263,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.92,
+   "tool": "small_talk",
+   "tool_prob": 0.76,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.76
+    ],
+    [
+     "clinic_info",
+     0.21000000000000002
+    ],
+    [
+     "book_appointment",
+     0.02
+    ]
+   ],
+   "frustration": 2.15,
+   "escalate": 0.94,
+   "usage": {
+    "input_tokens": 7570,
+    "output_tokens": 3167
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "esc-3",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 342.16190001461655,
+   "reply": "You're welcome! Is there anything else I can help you with?",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.8916523103708668,
+   "tool": "small_talk",
+   "tool_prob": 0.6569678783306573,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.6569678783306573
+    ],
+    [
+     "cancel_appointment",
+     0.18081147602997183
+    ],
+    [
+     "billing_question",
+     0.08841307725793035
+    ]
+   ],
+   "frustration": 0.6970520088884504,
+   "escalate": 0.26410991145571067,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "esc-4",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 392.845899972599,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.93,
+   "tool": "small_talk",
+   "tool_prob": 0.74,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.74
+    ],
+    [
+     "clinic_info",
+     0.21000000000000002
+    ],
+    [
+     "book_appointment",
+     0.02
+    ]
+   ],
+   "frustration": 2.72,
+   "escalate": 0.98,
+   "usage": {
+    "input_tokens": 7578,
+    "output_tokens": 3167
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "esc-4",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 363.28300001332536,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.7740520902086447,
+   "tool": "cancel_appointment",
+   "tool_prob": 0.43173227768208494,
+   "tool_top3": [
+    [
+     "cancel_appointment",
+     0.43173227768208494
+    ],
+    [
+     "billing_question",
+     0.38199054156125656
+    ],
+    [
+     "small_talk",
+     0.15319256797686953
+    ]
+   ],
+   "frustration": 1.7260590719478772,
+   "escalate": 0.7708757119518468,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "esc-5",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 399.5068999938667,
+   "reply": "I'm connecting you to a member of our staff right now. Please stay on the line.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.88,
+   "tool": "pediatrics_telehealth_link",
+   "tool_prob": 0.31,
+   "tool_top3": [
+    [
+     "pediatrics_telehealth_link",
+     0.31
+    ],
+    [
+     "book_appointment",
+     0.27
+    ],
+    [
+     "small_talk",
+     0.15000000000000002
+    ]
+   ],
+   "frustration": 2.79,
+   "escalate": 0.95,
+   "usage": {
+    "input_tokens": 7573,
+    "output_tokens": 3172
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "esc-5",
+   "gold": {
+    "tool": null,
+    "escalate": true,
+    "end_of_turn": true
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 351.93030000664294,
+   "reply": "Let me route you to the right team for that.",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.9893547233101937,
+   "tool": "home_care_second_opinion",
+   "tool_prob": 0.40918183688573734,
+   "tool_top3": [
+    [
+     "home_care_second_opinion",
+     0.40918183688573734
+    ],
+    [
+     "book_appointment",
+     0.32256285384976224
+    ],
+    [
+     "prescription_refill",
+     0.06570057483014384
+    ]
+   ],
+   "frustration": 0.39907498138728775,
+   "escalate": 0.49864960045139667,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "eot-1",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 425.7558999815956,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.05,
+   "tool": "small_talk",
+   "tool_prob": 0.93,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.93
+    ],
+    [
+     "book_appointment",
+     0.04
+    ],
+    [
+     "clinic_info",
+     0.02
+    ]
+   ],
+   "frustration": 0.0,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 7568,
+    "output_tokens": 3167
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "eot-1",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 356.3842999865301,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.3863798983453078,
+   "tool": "small_talk",
+   "tool_prob": 0.7567745854697757,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.7567745854697757
+    ],
+    [
+     "billing_question",
+     0.1739046688850481
+    ],
+    [
+     "book_appointment",
+     0.02472040771532635
+    ]
+   ],
+   "frustration": 1.0084405122558366,
+   "escalate": 0.04864566797730584,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "eot-2",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 447.546900017187,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.04,
+   "tool": "small_talk",
+   "tool_prob": 0.81,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.81
+    ],
+    [
+     "book_appointment",
+     0.09999999999999999
+    ],
+    [
+     "clinic_info",
+     0.05
+    ]
+   ],
+   "frustration": 0.06,
+   "escalate": 0.08,
+   "usage": {
+    "input_tokens": 7572,
+    "output_tokens": 3167
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "eot-2",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 364.8679999751039,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.15174869906376276,
+   "tool": "billing_question",
+   "tool_prob": 0.6460667959308616,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.6460667959308616
+    ],
+    [
+     "small_talk",
+     0.22465963465038688
+    ],
+    [
+     "reschedule_appointment",
+     0.03944401756948417
+    ]
+   ],
+   "frustration": 1.3001777138251462,
+   "escalate": 0.05976773261577147,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "eot-3",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 390.3623999794945,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.04,
+   "tool": "small_talk",
+   "tool_prob": 0.6,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.6
+    ],
+    [
+     "insurance_check",
+     0.37
+    ],
+    [
+     "book_appointment",
+     0.02
+    ]
+   ],
+   "frustration": 0.04,
+   "escalate": 0.06,
+   "usage": {
+    "input_tokens": 7571,
+    "output_tokens": 3167
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "eot-3",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 353.3898000023328,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 2.4,
+   "end_of_turn": 0.29744443278923227,
+   "tool": "billing_question",
+   "tool_prob": 0.8265908407949145,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.8265908407949145
+    ],
+    [
+     "small_talk",
+     0.09455167608134332
+    ],
+    [
+     "reschedule_appointment",
+     0.0377896811067232
+    ]
+   ],
+   "frustration": 1.0226820446901497,
+   "escalate": 0.05476693955149247,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "eot-4",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "jev",
+   "ok": true,
+   "latency_ms": 392.60510000167415,
+   "reply": "Mm-hm, go on.",
+   "model": "jev-1.13.0",
+   "server_ms": null,
+   "end_of_turn": 0.08,
+   "tool": "small_talk",
+   "tool_prob": 0.5700000000000001,
+   "tool_top3": [
+    [
+     "small_talk",
+     0.5700000000000001
+    ],
+    [
+     "cancel_appointment",
+     0.39
+    ],
+    [
+     "reschedule_appointment",
+     0.02
+    ]
+   ],
+   "frustration": 0.1,
+   "escalate": 0.09,
+   "usage": {
+    "input_tokens": 7570,
+    "output_tokens": 3167
+   }
+  },
+  {
+   "n_tools": 250,
+   "case": "eot-4",
+   "gold": {
+    "tool": null,
+    "escalate": false,
+    "end_of_turn": false
+   },
+   "lane": "clm",
+   "ok": true,
+   "latency_ms": 349.8171999817714,
+   "reply": "Mm-hm, go on.",
+   "model": "clm-voice",
+   "server_ms": 2.3,
+   "end_of_turn": 0.43031566761621604,
+   "tool": "billing_question",
+   "tool_prob": 0.6270956507197178,
+   "tool_top3": [
+    [
+     "billing_question",
+     0.6270956507197178
+    ],
+    [
+     "small_talk",
+     0.18423202622445722
+    ],
+    [
+     "reschedule_appointment",
+     0.0788479410729321
+    ]
+   ],
+   "frustration": 0.6824334190807819,
+   "escalate": 0.08940163914314782,
+   "usage": {
+    "billing_units": 4,
+    "input_tokens": 0,
+    "output_tokens": 0
+   }
+  }
+ ]
+}

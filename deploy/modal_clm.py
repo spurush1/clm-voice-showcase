@@ -11,6 +11,7 @@ and this container scales to zero when idle.
 The first request after idle cold-starts the GPU (~1-3 min while vLLM loads).
 Hit /health once before a demo to warm it.
 """
+import os
 import subprocess
 import time
 import urllib.request
@@ -50,4 +51,38 @@ def _wait(url: str, timeout: float = 900) -> None:
 def serve():
     subprocess.Popen(VLLM, shell=True)
     _wait("http://127.0.0.1:8090/v1/models")
-    subprocess.Popen("clm-serve --port 8700", shell=True)  # reads CLM_API_KEY from the secret
+    extra = f" --model clm-voice={FT_HEAD}" if os.path.exists(FT_HEAD) else ""  # Iteration 2 head, once trained
+    subprocess.Popen("clm-serve --port 8700" + extra, shell=True)  # reads CLM_API_KEY from the secret
+
+
+# --------------------------------------------------------------------------- Iteration 2: fine-tuning
+FT_DIR = "/cache/ft/voice"
+FT_HEAD = f"{FT_DIR}/best_head.pt"
+ft_image = (image.run_commands("git clone --depth 1 https://github.com/Contrastive-LM/CLM /opt/CLM")
+            .pip_install("pyarrow", "transformers"))
+
+
+@app.function(image=ft_image, gpu=["L4", "A10G", "L40S"], volumes={"/cache": cache}, timeout=2 * 3600)
+def finetune(train_rows: list[dict], test_rows: list[dict], extra_args: list[str]) -> str:
+    """Warm-start CLM's published head and fine-tune it on our typed voice-agent questions
+    with the authors' own train/finetune.py (--task choice). Returns the training log tail."""
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    data = "/cache/voice_data"
+    os.makedirs(f"{data}/voice", exist_ok=True)
+    for split, rows in (("train", train_rows), ("test", test_rows)):
+        pq.write_table(pa.Table.from_pylist(rows), f"{data}/voice/{split}.parquet")
+
+    subprocess.run("clm-download", shell=True, check=True)  # reference head -> /cache/clm
+    subprocess.Popen(VLLM, shell=True)
+    _wait("http://127.0.0.1:8090/v1/models")
+    cmd = ["python", "/opt/CLM/train/finetune.py", "--task", "choice", "--data", data, "--workflow", "voice",
+           "--embed-url", "http://127.0.0.1:8090/v1/embeddings", "--served-model-name", "qwen3-8b",
+           "--init-ckpt", "/cache/clm/CLM_v0.1-8B.pt", "--out-dir", FT_DIR, "--targets", "hard", *extra_args]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    cache.commit()
+    log = (r.stdout + "\n" + r.stderr)[-6000:]
+    if r.returncode:
+        raise RuntimeError(f"finetune failed ({r.returncode}):\n{log}")
+    return log
