@@ -1,0 +1,140 @@
+
+== 8 tools ==
+[ 1/40] book-1     llm=1994ms  jev=384ms
+[ 2/40] book-2     llm=1939ms  jev=372ms
+[ 3/40] book-3     llm=1774ms  jev=405ms
+[ 4/40] book-4     llm=1715ms  jev=398ms
+[ 5/40] book-5     llm=2108ms  jev=385ms
+[ 6/40] resched-1  llm=1971ms  jev=363ms
+[ 7/40] resched-2  llm=1794ms  jev=366ms
+[ 8/40] resched-3  llm=1990ms  jev=415ms
+[ 9/40] resched-4  llm=2296ms  jev=407ms
+[10/40] cancel-1   llm=1805ms  jev=361ms
+[11/40] cancel-2   llm=1848ms  jev=359ms
+[12/40] cancel-3   llm=2851ms  jev=452ms
+[13/40] refill-1   llm=2549ms  jev=387ms
+[14/40] refill-2   llm=1901ms  jev=381ms
+[15/40] refill-3   llm=1879ms  jev=396ms
+[16/40] refill-4   llm=1978ms  jev=379ms
+[17/40] bill-1     llm=1767ms  jev=400ms
+[18/40] bill-2     llm=1780ms  jev=464ms
+[19/40] bill-3     llm=2011ms  jev=363ms
+[20/40] bill-4     llm=1857ms  jev=373ms
+[21/40] ins-1      llm=2245ms  jev=436ms
+[22/40] ins-2      llm=1857ms  jev=613ms
+[23/40] ins-3      llm=1821ms  jev=496ms
+[24/40] ins-4      llm=1805ms  jev=399ms
+[25/40] info-1     llm=1870ms  jev=404ms
+[26/40] info-2     llm=1690ms  jev=352ms
+[27/40] info-3     llm=1984ms  jev=429ms
+[28/40] info-4     llm=2331ms  jev=344ms
+[29/40] talk-1     llm=1756ms  jev=359ms
+[30/40] talk-2     llm=1845ms  jev=548ms
+[31/40] talk-3     llm=1850ms  jev=404ms
+[32/40] esc-1      llm=1745ms  jev=345ms
+[33/40] esc-2      llm=1859ms  jev=357ms
+[34/40] esc-3      llm=1717ms  jev=362ms
+[35/40] esc-4      llm=2726ms  jev=389ms
+[36/40] esc-5      llm=1806ms  jev=377ms
+[37/40] eot-1      llm=1852ms  jev=396ms
+[38/40] eot-2      llm=1733ms  jev=420ms
+[39/40] eot-3      llm=2436ms  jev=350ms
+[40/40] eot-4      llm=1813ms  jev=412ms
+
+== 64 tools ==
+[ 1/40] book-1     llm=2007ms  jev=405ms
+[ 2/40] book-2     llm=2105ms  jev=382ms
+[ 3/40] book-3     llm=2364ms  jev=566ms
+[ 4/40] book-4     llm=1938ms  jev=400ms
+[ 5/40] book-5     llm=1833ms  jev=376ms
+[ 6/40] resched-1  llm=1891ms  jev=360ms
+[ 7/40] resched-2  llm=1718ms  jev=418ms
+[ 8/40] resched-3  llm=1925ms  jev=400ms
+[ 9/40] resched-4  llm=1961ms  jev=424ms
+[10/40] cancel-1   llm=1764ms  jev=368ms
+[11/40] cancel-2   llm=1920ms  jev=366ms
+[12/40] cancel-3   llm=1849ms  jev=408ms
+[13/40] refill-1   llm=2036ms  jev=462ms
+[14/40] refill-2   llm=1821ms  jev=370ms
+[15/40] refill-3   llm=1820ms  jev=380ms
+[16/40] refill-4   llm=1888ms  jev=407ms
+[17/40] bill-1     llm=1782ms  jev=397ms
+[18/40] bill-2     llm=1846ms  jev=375ms
+[19/40] bill-3     llm=1802ms  jev=368ms
+[20/40] bill-4     llm=2392ms  jev=376ms
+[21/40] ins-1      llm=1989ms  jev=393ms
+[22/40] ins-2      llm=1981ms  jev=395ms
+[23/40] ins-3      llm=2061ms  jev=399ms
+[24/40] ins-4      llm=1809ms  jev=390ms
+[25/40] info-1     llm=2366ms  jev=405ms
+[26/40] info-2     llm=1834ms  jev=392ms
+[27/40] info-3     llm=1868ms  jev=382ms
+[28/40] info-4     llm=2060ms  jev=389ms
+[29/40] talk-1     llm=1765ms  jev=376ms
+[30/40] talk-2     llm=2208ms  jev=388ms
+[31/40] talk-3     llm=2373ms  jev=409ms
+[32/40] esc-1      llm=1842ms  jev=390ms
+[33/40] esc-2      llm=1808ms  jev=375ms
+[34/40] esc-3      llm=1819ms  jev=374ms
+[35/40] esc-4      llm=4614ms  jev=398ms
+[36/40] esc-5      llm=1862ms  jev=378ms
+[37/40] eot-1      llm=1968ms  jev=386ms
+[38/40] eot-2      llm=1949ms  jev=372ms
+[39/40] eot-3      llm=ERR  jev=442ms
+[40/40] eot-4      llm=1795ms  jev=381ms
+
+== 250 tools ==
+[ 1/40] book-1     llm=ERR  jev=407ms
+[ 2/40] book-2     llm=ERR  jev=410ms
+[ 3/40] book-3     llm=ERR  jev=451ms
+[ 4/40] book-4     llm=ERR  jev=410ms
+[ 5/40] book-5     llm=ERR  jev=432ms
+[ 6/40] resched-1  llm=ERR  jev=399ms
+[ 7/40] resched-2  llm=ERR  jev=434ms
+[ 8/40] resched-3  llm=ERR  jev=439ms
+[ 9/40] resched-4  llm=ERR  jev=432ms
+[10/40] cancel-1   llm=ERR  jev=432ms
+[11/40] cancel-2   llm=ERR  jev=726ms
+[12/40] cancel-3   llm=ERR  jev=428ms
+[13/40] refill-1   llm=ERR  jev=461ms
+[14/40] refill-2   llm=ERR  jev=410ms
+[15/40] refill-3   llm=ERR  jev=414ms
+[16/40] refill-4   llm=ERR  jev=415ms
+[17/40] bill-1     llm=ERR  jev=421ms
+[18/40] bill-2     llm=ERR  jev=398ms
+[19/40] bill-3     llm=ERR  jev=399ms
+[20/40] bill-4     llm=ERR  jev=415ms
+[21/40] ins-1      llm=ERR  jev=409ms
+[22/40] ins-2      llm=ERR  jev=448ms
+[23/40] ins-3      llm=ERR  jev=419ms
+[24/40] ins-4      llm=ERR  jev=431ms
+[25/40] info-1     llm=ERR  jev=412ms
+[26/40] info-2     llm=ERR  jev=406ms
+[27/40] info-3     llm=ERR  jev=427ms
+[28/40] info-4     llm=ERR  jev=447ms
+[29/40] talk-1     llm=ERR  jev=444ms
+[30/40] talk-2     llm=ERR  jev=445ms
+[31/40] talk-3     llm=ERR  jev=403ms
+[32/40] esc-1      llm=ERR  jev=436ms
+[33/40] esc-2      llm=ERR  jev=435ms
+[34/40] esc-3      llm=ERR  jev=456ms
+[35/40] esc-4      llm=ERR  jev=436ms
+[36/40] esc-5      llm=ERR  jev=448ms
+[37/40] eot-1      llm=ERR  jev=461ms
+[38/40] eot-2      llm=ERR  jev=411ms
+[39/40] eot-3      llm=ERR  jev=452ms
+[40/40] eot-4      llm=ERR  jev=398ms
+
+# Voice-agent eval: Normal LLM vs Jev vs CLM
+
+Run 2026-10-06T20:07:17 · 40 labeled caller turns · models: {'llm': 'openai/gpt-4.1-mini', 'jev': 'jev-latest', 'clm': 'clm-latest'}
+
+| Tools | Lane | Tool acc | Escalate acc | End-of-turn acc | p50 ms | p95 ms | Under 300 ms | CLM server p50 ms |
+|---|---|---|---|---|---|---|---|---|
+| 8 | Normal LLM | 100% | 100% | 100% | 1857 | 2726 | 0% | — |
+| 8 | Jev | 100% | 100% | 98% | 388 | 548 | 0% | — |
+| 64 | Normal LLM | 100% | 100% | 97% | 1891 | 2392 | 0% | — |
+| 64 | Jev | 100% | 100% | 98% | 390 | 462 | 0% | — |
+| 250 | Normal LLM | error: HTTP 402: {"error":{"message":"This request would exceed you |||||||
+| 250 | Jev | 100% | 100% | 98% | 429 | 461 | 0% | — |
+

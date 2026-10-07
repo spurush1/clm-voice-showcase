@@ -1,0 +1,137 @@
+
+== 8 tools ==
+[ 1/40] book-1     llm=1862ms
+[ 2/40] book-2     llm=2151ms
+[ 3/40] book-3     llm=1762ms
+[ 4/40] book-4     llm=2015ms
+[ 5/40] book-5     llm=1981ms
+[ 6/40] resched-1  llm=1826ms
+[ 7/40] resched-2  llm=1937ms
+[ 8/40] resched-3  llm=2749ms
+[ 9/40] resched-4  llm=1813ms
+[10/40] cancel-1   llm=1689ms
+[11/40] cancel-2   llm=1830ms
+[12/40] cancel-3   llm=1696ms
+[13/40] refill-1   llm=3312ms
+[14/40] refill-2   llm=1846ms
+[15/40] refill-3   llm=1938ms
+[16/40] refill-4   llm=1833ms
+[17/40] bill-1     llm=1756ms
+[18/40] bill-2     llm=1873ms
+[19/40] bill-3     llm=2246ms
+[20/40] bill-4     llm=1892ms
+[21/40] ins-1      llm=1728ms
+[22/40] ins-2      llm=1780ms
+[23/40] ins-3      llm=1809ms
+[24/40] ins-4      llm=1777ms
+[25/40] info-1     llm=1918ms
+[26/40] info-2     llm=2018ms
+[27/40] info-3     llm=1777ms
+[28/40] info-4     llm=1773ms
+[29/40] talk-1     llm=1903ms
+[30/40] talk-2     llm=1806ms
+[31/40] talk-3     llm=1779ms
+[32/40] esc-1      llm=2048ms
+[33/40] esc-2      llm=1948ms
+[34/40] esc-3      llm=2255ms
+[35/40] esc-4      llm=2092ms
+[36/40] esc-5      llm=2049ms
+[37/40] eot-1      llm=1849ms
+[38/40] eot-2      llm=1822ms
+[39/40] eot-3      llm=1819ms
+[40/40] eot-4      llm=1706ms
+
+== 64 tools ==
+[ 1/40] book-1     llm=2144ms
+[ 2/40] book-2     llm=1802ms
+[ 3/40] book-3     llm=2588ms
+[ 4/40] book-4     llm=2050ms
+[ 5/40] book-5     llm=1771ms
+[ 6/40] resched-1  llm=1954ms
+[ 7/40] resched-2  llm=1933ms
+[ 8/40] resched-3  llm=2360ms
+[ 9/40] resched-4  llm=1940ms
+[10/40] cancel-1   llm=1851ms
+[11/40] cancel-2   llm=1796ms
+[12/40] cancel-3   llm=2070ms
+[13/40] refill-1   llm=1998ms
+[14/40] refill-2   llm=1762ms
+[15/40] refill-3   llm=1828ms
+[16/40] refill-4   llm=1760ms
+[17/40] bill-1     llm=1847ms
+[18/40] bill-2     llm=2267ms
+[19/40] bill-3     llm=1882ms
+[20/40] bill-4     llm=1805ms
+[21/40] ins-1      llm=2124ms
+[22/40] ins-2      llm=1836ms
+[23/40] ins-3      llm=1884ms
+[24/40] ins-4      llm=2040ms
+[25/40] info-1     llm=1895ms
+[26/40] info-2     llm=1898ms
+[27/40] info-3     llm=1829ms
+[28/40] info-4     llm=1705ms
+[29/40] talk-1     llm=1915ms
+[30/40] talk-2     llm=3067ms
+[31/40] talk-3     llm=1944ms
+[32/40] esc-1      llm=2292ms
+[33/40] esc-2      llm=2505ms
+[34/40] esc-3      llm=1861ms
+[35/40] esc-4      llm=1859ms
+[36/40] esc-5      llm=1908ms
+[37/40] eot-1      llm=1973ms
+[38/40] eot-2      llm=2373ms
+[39/40] eot-3      llm=1745ms
+[40/40] eot-4      llm=1879ms
+
+== 250 tools ==
+[ 1/40] book-1     llm=2184ms
+[ 2/40] book-2     llm=2600ms
+[ 3/40] book-3     llm=2347ms
+[ 4/40] book-4     llm=2060ms
+[ 5/40] book-5     llm=2149ms
+[ 6/40] resched-1  llm=1908ms
+[ 7/40] resched-2  llm=2352ms
+[ 8/40] resched-3  llm=2299ms
+[ 9/40] resched-4  llm=1945ms
+[10/40] cancel-1   llm=2339ms
+[11/40] cancel-2   llm=2124ms
+[12/40] cancel-3   llm=2430ms
+[13/40] refill-1   llm=1862ms
+[14/40] refill-2   llm=1946ms
+[15/40] refill-3   llm=1991ms
+[16/40] refill-4   llm=2096ms
+[17/40] bill-1     llm=1794ms
+[18/40] bill-2     llm=2071ms
+[19/40] bill-3     llm=2122ms
+[20/40] bill-4     llm=1761ms
+[21/40] ins-1      llm=1874ms
+[22/40] ins-2      llm=ERR
+[23/40] ins-3      llm=2822ms
+[24/40] ins-4      llm=1868ms
+[25/40] info-1     llm=ERR
+[26/40] info-2     llm=ERR
+[27/40] info-3     llm=ERR
+[28/40] info-4     llm=ERR
+[29/40] talk-1     llm=ERR
+[30/40] talk-2     llm=ERR
+[31/40] talk-3     llm=ERR
+[32/40] esc-1      llm=ERR
+[33/40] esc-2      llm=ERR
+[34/40] esc-3      llm=ERR
+[35/40] esc-4      llm=ERR
+[36/40] esc-5      llm=ERR
+[37/40] eot-1      llm=ERR
+[38/40] eot-2      llm=ERR
+[39/40] eot-3      llm=ERR
+[40/40] eot-4      llm=ERR
+
+# Voice-agent eval: Normal LLM vs Jev vs CLM
+
+Run 2026-10-06T20:01:00 · 40 labeled caller turns · models: {'llm': 'openai/gpt-4.1-mini', 'jev': 'jev-latest', 'clm': 'clm-latest'}
+
+| Tools | Lane | Tool acc | Escalate acc | End-of-turn acc | p50 ms | p95 ms | Under 300 ms | CLM server p50 ms |
+|---|---|---|---|---|---|---|---|---|
+| 8 | Normal LLM | 100% | 100% | 100% | 1847 | 2749 | 0% | — |
+| 64 | Normal LLM | 100% | 100% | 100% | 1903 | 2588 | 0% | — |
+| 250 | Normal LLM | 100% | 100% | 100% | 2096 | 2600 | 0% | — |
+

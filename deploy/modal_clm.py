@@ -22,7 +22,7 @@ image = (
     .apt_install("git")
     .pip_install("vllm", "huggingface_hub[hf_transfer]",
                  "git+https://github.com/Contrastive-LM/CLM")
-    .env({"HF_HUB_ENABLE_HF_TRANSFER": "1"})
+    .env({"HF_HUB_ENABLE_HF_TRANSFER": "1", "HF_HOME": "/cache/hf", "CLM_CKPT_DIR": "/cache/clm"})
 )
 cache = modal.Volume.from_name("clm-cache", create_if_missing=True)  # HF weights + CLM head
 app = modal.App("clm-voice")
@@ -42,7 +42,7 @@ def _wait(url: str, timeout: float = 900) -> None:
     raise RuntimeError(f"{url} did not come up")
 
 
-@app.function(image=image, gpu="L4", volumes={"/root/.cache": cache},
+@app.function(image=image, gpu=["L4", "A10G", "L40S"], volumes={"/cache": cache},
               secrets=[modal.Secret.from_name("clm-api-key")],
               timeout=24 * 3600, scaledown_window=2 * 60)  # GPU bills while idle; keep this short
 @modal.concurrent(max_inputs=32)
